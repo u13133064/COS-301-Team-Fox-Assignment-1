@@ -12,11 +12,12 @@
 
 \begin{itemize}
 
-\item There will be 3 main user roles:
+\item There will be 4 main user roles:
 \begin{itemize}
 \item User
 \item Research Leader
 \item Head of Department
+\item Administrator
 \end{itemize}
 Only staff members can be users.
 
@@ -25,13 +26,16 @@ Only staff members can be users.
 \item The system must support a maximum of \textbf{100 users}, and cater to the users concurrently.
 
 \item Each publication will have at least one author. Authors do not necessarily have to be users, as long as one author is a staff member.
-
+\item the number of authors is unlimited
 \item With regard to users:
 \begin{itemize}
 \item They can add a paper, as long as they are one of the authors
 \item They can only view papers they authored or co-authored
 \item All authors, if they are users, should be able to edit the metadata of a publication
 \item Authors are sequenced. \textit{ie} First author, Second author etc.
+\item Authors should be added or removed at anytime of the paper
+\item Use search to add an author, if they are not in the list they may then be added 
+\item University of Pretoria should be the default of anything you add 
 \item The Head of Department can see all papers
 \item A Research Leader can see all papers in his or her research group
 \item A user must explicitly assign themselves as an author when creating an entry (\textit{eg} by means of a checkbox which is ticked by default)
@@ -40,6 +44,8 @@ title, contact number, email address, institution, position (optional) and a com
 \item Any user can see any other user's profile
 \item Any user should be able to edit the profile of any researcher who is not a user
 \item No photos should be used for profile pages
+\item Users should keep track of units, there should be a target for a year
+\item Graphs should be used to measure progress of units
 \item \textit{Is the functionality to search for users a requirement?}
 \end{itemize}
 
@@ -47,8 +53,13 @@ title, contact number, email address, institution, position (optional) and a com
 \begin{itemize}
 \item Papers themselves are not on the system, only metadata/links to the papers
 \item Therefore, no concurrent editing of the actual papers is necessary
+\item Changes can be made but papers can not be deleted once started
+\item A publication can be published across different research groups
+\item There should be backup for all information 
+\item Papers should have progress to state how far it is from finished(percentage)
 \item Metadata for the papers includes title, author(s), deadlines/dates, progress, stages (waiting, accepted, rejected, terminated), intended venue (conference, journal) etc.
 \item The intended venue should be linked to the "units" that the venue is worth. The units provided to the author(s) is calculated by taking the units for a specific venue, divided by the number of authors
+\item Unit weight has to be stored and once it is in the database it should appear by default
 \item Papers will be ordered by author
 \item A publication can belong to multiple research groups
 \item Author names could be used to populate a list to make the selection of authors easier
