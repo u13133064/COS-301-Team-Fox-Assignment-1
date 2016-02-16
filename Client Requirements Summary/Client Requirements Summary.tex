@@ -29,6 +29,7 @@ Only staff members can be users.
 \item the number of authors is unlimited
 \item With regard to users:
 \begin{itemize}
+\item Authors who are not Users do not have access to the system
 \item They can add a paper, as long as they are one of the authors
 \item They can only view papers they authored or co-authored
 \item All authors, if they are users, should be able to edit the metadata of a publication
@@ -44,9 +45,12 @@ title, contact number, email address, institution, position (optional) and a com
 \item Any user can see any other user's profile
 \item Any user should be able to edit the profile of any researcher who is not a user
 \item No photos should be used for profile pages
+<<<<<<< HEAD
 \item Users should keep track of units, there should be a target for a year
 \item Graphs should be used to measure progress of units
 \item \textit{Is the functionality to search for users a requirement?}
+=======
+>>>>>>> 385aa0f07e219502d9ca61f32d8f52244971943c
 \end{itemize}
 
 \item With regard to papers:
@@ -58,11 +62,12 @@ title, contact number, email address, institution, position (optional) and a com
 \item There should be backup for all information 
 \item Papers should have progress to state how far it is from finished(percentage)
 \item Metadata for the papers includes title, author(s), deadlines/dates, progress, stages (waiting, accepted, rejected, terminated), intended venue (conference, journal) etc.
+\item It must be possible to switch back and forth between paper progress-states at will
 \item The intended venue should be linked to the "units" that the venue is worth. The units provided to the author(s) is calculated by taking the units for a specific venue, divided by the number of authors
 \item Unit weight has to be stored and once it is in the database it should appear by default
 \item Papers will be ordered by author
 \item A publication can belong to multiple research groups
-\item Author names could be used to populate a list to make the selection of authors easier
+\item Author names could be used to populate a, searchable, list to make the selection of authors easier
 \end{itemize}
 
 \item The system should cater only for the COS department. However, catering for numerous departments can be considered when looking at the architectural design.
