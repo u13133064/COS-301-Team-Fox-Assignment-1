@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section{Client Requirements Summary}
+
+\textit{The following is a summary of my interpretation of the Client Session that took place on Tuesday, 16 February. Please feel free to add your own interpretations to it, lecturers included.}\\
+\\
+\textbf{Context: } The client requires the implementation of a system which will allow researchers to keep track of their publications. 
+
+\begin{itemize}
+
+\item There will be 3 main user roles:
+\begin{itemize}
+\item User
+\item Research Leader
+\item Head of Department
+\end{itemize}
+Only staff members can be users.
+
+\item Additionally, \textbf{admin login} should be supported, with the ability to add or remove users. The Head of Department is an admin by default.
+
+\item The system must support a maximum of \textbf{100 users}, and cater to the users concurrently.
+
+\item Each publication will have at least one author. Authors do not necessarily have to be users, as long as one author is a staff member.
+
+\item With regard to users:
+\begin{itemize}
+\item They can add a paper, as long as they are one of the authors
+\item They can only view papers they authored or co-authored
+\item All authors, if they are users, should be able to edit the metadata of a publication
+\item Authors are sequenced. \textit{ie} First author, Second author etc.
+\item The Head of Department can see all papers
+\item A Research Leader can see all papers in his or her research group
+\item A user must explicitly assign themselves as an author when creating an entry (\textit{eg} by means of a checkbox which is ticked by default)
+\item Users must have a basic profile page/record that includes information such as name, 
+title, contact number, email address, institution, position (optional) and a comment block. This page \textbf{must not} include the user's publications
+\item Any user can see any other user's profile
+\item Any user should be able to edit the profile of any researcher who is not a user
+\item No photos should be used for profile pages
+\item \textit{Is the functionality to search for users a requirement?}
+\end{itemize}
+
+\item With regard to papers:
+\begin{itemize}
+\item Papers themselves are not on the system, only metadata/links to the papers
+\item Therefore, no concurrent editing of the actual papers is necessary
+\item Metadata for the papers includes title, author(s), deadlines/dates, progress, stages (waiting, accepted, rejected, terminated), intended venue (conference, journal) etc.
+\item The intended venue should be linked to the "units" that the venue is worth. The units provided to the author(s) is calculated by taking the units for a specific venue, divided by the number of authors
+\item Papers will be ordered by author
+\item A publication can belong to multiple research groups
+\item Author names could be used to populate a list to make the selection of authors easier
+\end{itemize}
+
+\item The system should cater only for the COS department. However, catering for numerous departments can be considered when looking at the architectural design.
+
+\item All activity (such as additions of users, edits etc.) should be \textbf{logged}.
+
+\item The system requires both a web interface and an Android application.
+
+\item Valuable statistics should be presented graphically via graphs and charts. For example, a progress graph showing the number of units an author has earned.
+
+\item The system should provide email reminders to authors when deadlines are approaching
+
+\end{itemize}
+
+\end{document}
