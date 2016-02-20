@@ -165,16 +165,16 @@ This section discusses the application functionality required by users (and othe
 Critical
 \begin{itemize}
 \item Adding a conference paper
-\item Adding a author to a conference paper
+\item Adding an author to a conference paper
 \item User being able to see all papers they have added or mentioned as authors to
 \item Adding a researcher to a research group
 \item Editing meta data 
 \item Research leader being able to view all papers and their progress
 \item The state of the paper (submitted, waiting, rejected, published)
 \item Functionality to back up 
-\item add and remove authors anytime of the paper
+\item Add and remove authors anytime of the paper
 \item Show history of papers
-\item Stuff members being able to access the portal
+\item Staff members being able to access the portal
 
 \end{itemize}
 Important
@@ -184,7 +184,7 @@ Important
 \item log everything 
 \item Keep track of units, showing charts to see if they meet the target
 \item Count units only when paper has been published
-\item U.P is the default of everything
+\item U.P. is the default of everything
 \item Show the intend venue of paper and the type of the paper
 \item Send a reminder of when the paper is due
 \item unit paper appears by default once it has been stored
@@ -204,7 +204,314 @@ Nice to have
 % To be done by: Kudzai
 %----------------------------------------------------------------------------------------
 \subsection{Use case/Services contracts}
+Adding a conference paper
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User must be a staff member
+        \item User must be logged in
+        \item A paper must have at least one author
+         \item Primary author must be specified
+        \item User must enter the meta data about the paper
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Conference paper successfully added
+    \end{itemize}
+    \item Exceptions
+    \begin{itemize}
+        \item User can create a paper but does not have to be an author
+    \end{itemize}
+\end{itemize}
+Adding an author to a conference paper
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User must be a staff member
+        \item User must be logged in
+        \item User can specify the number of co-authors
+       
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Author would be added to a paper
+    \end{itemize}
+    \item Exceptions
+    \begin{itemize}
+        \item Author does not have to be a user
+    \end{itemize}
+\end{itemize}
+User being able to see all papers they have added or mentioned as authors to one
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User must be logged in
+        \item User must be an author or co-author to at least one paper
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item User will be able to view their papers
+    \end{itemize}
+\end{itemize}
+Adding a researcher to a research group
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User adding the researcher must be a researcher leader, Head of Department or an administrator
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Researcher added to research group
+    \end{itemize}
+\end{itemize}
+The state of the paper (submitted, waiting, rejected, published)
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The paper must have already been added to the system
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The user can view the status of the paper
+    \end{itemize}
+\end{itemize}
+Editing meta data
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user must be the author or co-author of the paper
+        \item The paper must already be added in the system
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The user is successful in editing the meta data of the paper
+    \end{itemize}
+    \item Exceptions
+    % Still not sure about this
+    \begin{itemize}
+        %\item An administrator can edit the meta data of any paper in the system
+        %\item The head of department can edit the meta data of any paper in the system
+        %\item A research leader can edit the meta data of any paper in their research group
+    \end{itemize}
+\end{itemize}
+Research leader being able to view all papers and their progress
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user must be the research leader of the research group
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The user will be able to view any paper in the research group
+    \end{itemize}
+    \item Exceptions
+    \begin{itemize}
+        \item The head of department and administrator can also view the papers in the research group
+    \end{itemize}
+\end{itemize}
+Functionality to back up 
+\begin{itemize}
+    \item Preconditions
+    \item Postconditions
+    \item Exceptions
+\end{itemize}
+Add and remove authors anytime of the paper
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user must be the primary author of the paper
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The user would be successful in adding or removing authors to or from the paper
+    \end{itemize}
+\end{itemize}
+Show history of papers
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user can only view the history of their own papers
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The user will successfully view their papers' history
+    \end{itemize}
+    \item Exceptions
+    \begin{itemize}
+        \item The head of department can view the history of any paper
+        \item The administrator can view the history of any paper
+        \item The research leader can view the history of any paper in their research group
+    \end{itemize}
+\end{itemize}
+Staff members being able to access the portal
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item Staff members must have profiles on the system
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Staff members successfully access the portal
+    \end{itemize}
+    \item Exceptions
+\end{itemize}
+Head Of Department being able to view all papers
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user type must be the head of department
+        \item There can only be one head of department
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The head of department can successfully view all papers
+    \end{itemize}
+\end{itemize}
+The sequence of authors(primary,second etc)
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The sequence of authors must be specified by the user that created the paper
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The sequence of authors is specified
+    \end{itemize}
+\end{itemize}
+log everything 
+\begin{itemize}
+    \item Preconditions
+    \item Postconditions
+    \item Exceptions
+\end{itemize}
+Keep track of units, showing charts to see if they meet the target
+\begin{itemize}
+    \item Preconditions
+    \item Postconditions
+    \item Exceptions
+\end{itemize}
+Count units only when paper has been published
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item Units must be assigned to the paper
+        \item Paper must already be published
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Units for the paper are counted
+    \end{itemize}
+\end{itemize}
+U.P. is the default of everything
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item A user profile must be in the process of being created
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The default institution for every profile will be U.p.
+    \end{itemize}
+\end{itemize}
+Show the intended venue of paper and the type of the paper
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item Must be done by a user who is about to create a paper or edited by an author or co-author
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Intended venue and type of paper is shown
+    \end{itemize}
 
+\end{itemize}
+Send a reminder of when the paper is due
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User to be sent reminder must be an author or co-author of the paper
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Reminder is sent to the user about when the paper is due
+    \end{itemize}
+\end{itemize}
+Unit paper appears by default once it has been stored
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User must specify the units allocated to the paper
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item Units for the paper appear by default
+    \end{itemize}
+\end{itemize}
+Search for an author
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The author must be already added into the system
+        \item The user searching for the author must be logged in
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The author is found if they exist
+    \end{itemize}
+\end{itemize}
+Head of department being able to view all units per staff
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item User must be head of department
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item head of department able to view the units allocated to each staff
+    \end{itemize}
+\end{itemize}
+An Administrator having complete access to the portal even on behalf of other users
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user must be an administrator
+        \item The user the administrator is accessing must exist
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The administrator successfully have complete access to the portal
+    \end{itemize}
+\end{itemize}
+Profile of the researcher
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The researcher must be logged in
+        \item The researcher must already have a profile on the system
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The researcher can successfull view their profile
+    \end{itemize}
+\end{itemize}
+Can adapt to a change such that it can be extended for other departments
+%Is this a use case?
+\begin{itemize}
+    \item Preconditions
+    \item Postconditions
+    \item Exceptions
+\end{itemize}
+A user who's not an author adding a paper for someone else
+\begin{itemize}
+    \item Preconditions
+    \begin{itemize}
+        \item The user must be a staff member
+    \end{itemize}
+    \item Postconditions
+    \begin{itemize}
+        \item The user successfully creates a paper that another user is an author of
+    \end{itemize}
+\end{itemize}
 %----------------------------------------------------------------------------------------
 % To be done by: GP & Hlengekile
 %----------------------------------------------------------------------------------------
