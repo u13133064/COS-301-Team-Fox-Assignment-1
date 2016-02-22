@@ -1,0 +1,28 @@
+\documentclass[a4paper,14pt]{report}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\author{Jodan Alberts - u1439 5283}
+
+\begin{document}
+
+\section{Quality Requirements}
+
+\subsection{Performance}
+The system must work as efficiently as possible and not lag in delivering information to the user. Since this system will not be sending large amounts of data, it should not be difficult for the system to transfer the data speedily. In this implementation we expect the network speed to dictate performance – not the system itself. Regardless, the system must be able to handle the full amount of users (approx. 100) concurrently without experiencing significant delays or errors.
+
+\subsection{Reliability}
+It is imperative that the system not experience unnecessary downtime (period of in-operation of the system), thus preventing users from checking on or altering information on the system. An optimal uptime (period of normal operation of the system) within a month would be 99% and upwards. Additionally there should not be frequent errors within normal operating parameters of the system. This means that simple logins (sessions), alterations or additions to the database should not cause errors which affect the system as a whole. Additionally, minor human errors, such as omission of information, should not be allowed to propagate through the system. But the system should rather allow the user to fix the error immediately – this will also contribute towards the accuracy of information in the database.
+
+\subsection{Scalability}
+The system will initially be implemented to manage papers pertaining to one faculty, but it might be necessary in the future to expand it to manage more faculties. The maximum amount for one implementation to manage should not exceed 10, and as such it should be scalable to that amount of faculties and the users associated with them. We make the assumption that the total users per faculty does not exceed 100 and, thus, the total on the system will never exceed 1000.
+
+\subsection{Usability} Users must be able to login, edit information and logout without hassle. The interface should not be cluttered and should not contain redundant information. As management of information on the system is critical, accessing said information should be as simple as possible.
+
+\subsection{Auditability}
+In order to track changes and/or errors on the system, all actions by users must be logged as they occur. This includes, but is not limited to, log-in attempts, editing of information (whether successful or not) and log-outs. All errors should also be logged in order to simplify error-tracking. The logging system must not interfere with the users actions and must not significantly affect performance. Logs must be timestamped and must contain information on which user executed an action – or where an error occurred.
+
+\subsection{Security}
+The system will be protected by a login system which will require a user to enter an ID and a password. The ID and password will then be compared to users in the system’s database and, if an appropriate user is found AND the passwords (entered and stored) match, may the user proceed to access the system. This system must not, under any circumstances, allow unauthorised users to enter the system. If a user enters incorrect information, the system must notify the user and request that they correct the input before allowing them to continue to the rest f the system.
+
+\end{document}
