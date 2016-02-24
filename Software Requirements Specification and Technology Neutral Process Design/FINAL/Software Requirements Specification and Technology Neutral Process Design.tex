@@ -75,11 +75,37 @@ Gian Paolo \textsc{Buffo} % Your name
 %----------------------------------------------------------------------------------------
 \section{Introduction}
 
-The requirements specification should ultimately contain sufficient information such that the system could be largely developed by a third party without further input. To this end the requirements must be precise and testable.
+This is the Software Requirements specification document for the system to keep record of research papers in the Computer Science Department of the University of Pretoria.
+This document includes sections such as:
+\begin{enumerate}
+    \item Vision for the system
+\begin{itemize}
+    \item This includes the projected vision and outcomes of the system and what the Computer Science Department aims to achieve with this project. 
+\end{itemize}
 
-The requirements need not be fully specified up-front. One might start with the vision, scope and architectural requirements, perform an upfront software architecture engineering phase and then iteratively elicit the detailed requirements for a use case; build, test and deploy the use case before adding the detailed requirements for the next use case.
+    \item Background to why the system is being developed
 
-Such an approach follows solid engineering practices for the core software infrastructure architecture with an agile software development approach within which the application functionality is developed iteratively.
+\begin{itemize}
+    \item This includes a discussion of the problem which the Computer Science Department is faced with in regard to keeping track of their research papers and how this system will find a solution to the problem being faced. 
+\end{itemize}
+
+    \item Architecture Requirements
+\setlength{\parindent}{2.5em}
+
+\begin{itemize}
+    \item This includes how the system will be accessed by the users of the system and through which platforms this will be done. Additionally the quality requirements of the system will be discussed as well as what external systems will be used to put this system together. Lastly it will include any constraints that the client has specified with regard to what must be used in the system. 
+\end{itemize}
+
+    \item Functional requirements and application design
+
+\begin{itemize}
+    \item This will include the functionality of the system that is required by the users of the system. 
+\end{itemize}
+    \item Open Issues
+\begin{itemize}
+    \item This section will discuss any requirements of the system that may be unclear or has not been specified. It will also include any inconsistencies that have been discovered in the requirements. 
+\end{itemize}
+\end{enumerate}
 
 %----------------------------------------------------------------------------------------
 % Done by: Gian Paolo Buffo
@@ -227,11 +253,20 @@ All integration needs to be seamless and not interfere with system performance. 
 %----------------------------------------------------------------------------------------
 \subsection{Architecture Constraints}
 
-This specifies any constraints the client may specify on the system architecture include
+There are not too many architectural constraints to this system. However some constraints do exist, such as:
 \begin{itemize}
-\item technologies which MUST be used,
-\item architectural patterns/frameworks which must be used (e.g. layering, Services Oriented Architectures, . . . )
-\item . . .
+\item The role of the user in the system \textit{(i.e. Author, Research Leader, Administrator, Head of Department)} determines their permissions on the system.
+	\begin{itemize}
+	\item Author - May only edit metadata about a paper they are working on or have already published.
+	\item Research Leader - May see all papers in his or her research group.
+	\item Administrator/Head of Department - Should be able to view everything in the system (including all papers published, in progress or discontinued) as well as the number of units each user has earned. They may also add or remove users.
+	\end{itemize}
+\item The system must only cater for the Computer Science Department of the University of Pretoria. Users may not be anyone else outside the department. 
+\item When viewing profiles of other users, one may not see the papers of the other users - despite the progress of these papers - or the number of units they have earned in total. 
+\item However when viewing ones own profile, one may view their papers - regardless of progress - and also may view the number of units they have earned in total. 
+\item Developing the system for the web can be very different from developing it for Android. This does, however, depend on the language(s) used to develop the Android application. If it is coded using web based languages it would be easier to port it to android. However if it is developed using Java the web-based system would not be very portable to Android. 
+\item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
+\item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
 \end{itemize}
 
 \section{Functional requirements and application design}
@@ -594,3 +629,4 @@ Discuss in this section
 
 
 \end{document}
+
