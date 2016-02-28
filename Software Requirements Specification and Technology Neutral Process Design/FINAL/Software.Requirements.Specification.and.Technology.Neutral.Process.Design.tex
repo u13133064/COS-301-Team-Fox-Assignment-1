@@ -267,6 +267,10 @@ All integration needs to be seamless and not interfere with system performance. 
 
 There are not too many architectural constraints to this system. However some constraints do exist, such as:
 \begin{itemize}
+\item The only technological constraint we have been given is the fact that we cannot link the system to any external resources besides for sending an email reminder, to the user, about the due date for their paper.
+	\begin{itemize}
+	\item The only constraint with regard to this would be that we would not be able to ease the way in which the user could keep track of their due dates by \textit{e.g. Adding the date directly to their google calendar}. Thus the user would manually need to add the date to their calendar or create a reminder for themselves (if they want to). Another problem could be that the email reminder that is sent by the system could be cluttered between all the other emails that have been received, by the user, and thus the user may forget about the reminder that was sent by the system. 
+	\end{itemize}
 \item The role of the user in the system \textit{(i.e. Author, Research Leader, Administrator, Head of Department)} determines their permissions on the system.
 	\begin{itemize}
 	\item Author - May only edit metadata about a paper they are working on or have already published.
