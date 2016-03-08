@@ -888,10 +888,86 @@ In this section, the data structure requirements of the system are specified in 
 \end{figure}
 
 %----------------------------------------------------------------------------------------
-% To be done by: Jacques
+% Done by: Jacques van Wyk
 %----------------------------------------------------------------------------------------
+\newpage
 \section{Architectural Patterns or Styles}
-
+	Our research team have decided to use the MVC(Model-View-Controller)- and
+	Layering architectural patterns for the research publication system for the mini
+	project. Since the system should have a web-interface and a mobile Android interface
+	it is necessary to divide the system into parts where the two interfaces are independent
+	of each other, but both can have concurrent access to a central database. In addition,
+	this is necessary, because the interfaces will likely use different client-side
+	technologies for the graphical user interface and client logic.
+	\newline
+	\newline
+	The structure of MVC in the system:
+	\begin{itemize}
+		\item Model
+		\begin{itemize}
+			\item[] The Model represents the database and how the user- and research
+			data is structured, organized and stored in the database on the server-
+			side. Furthermore, it provides an interface through the written server
+			software by which the model can be manipulated from user interaction
+			through the controller.
+		\end{itemize}
+		\item Controller
+		\begin{itemize}
+			\item[] The controller partly represents the logic and the user-functionality
+			of the system and is downloaded or exists on the client's side of the
+			system. The controller interfaces with the model and the view
+			where the controller;for example, verifies user-input and determines the validity
+			of it; consequently, the controller manipulates the model through
+			the server-side software interface and the user's view is updated
+			with the updated data stored in the model.
+		\end{itemize}
+		\item View
+		\begin{itemize}
+			\item[] The view represents the GUI(Graphical User Interface) that is displayed
+			to the user and how it looks to the user when he/she interacts with it.
+			The view gets updated when the model has been manipulated by some user's
+			interaction with the controller.
+		\end{itemize}
+	\end{itemize}
+	The MVC architectural pattern simplifies and modularizes the design of the research
+	publication system in the following way:
+	\begin{itemize}
+		\item[-] The GUI's of the website- and Android applications can be developed
+	  	independent from each other.
+	  	\item[-] The client-side software and functionality of the website- and Android
+	  	applications can be developed independent from each other.
+	  	\item[-] The database and server software can be developed independent from which
+	  	client-side programming languages will be used and can be redistributed
+	  	to work with other controllers and views.
+	\end{itemize}
+	The Layering architectural pattern makes use of a set of programmed layers. Each
+	layer has been implemented to provide a certain unique functionality and can be used or
+	reused by certain other layers.
+	By making use of the Layering architectural pattern it can make the development
+	life cycle of the research publication system more efficient in the following ways:
+	\begin{itemize}
+		\item[-] Layers can be tested and debugged individually.
+	  	\item[-] Layers can be reused in other layered systems.
+	  	\item[-] Layers can be updated and improved to replace the older ones.
+	  	\item[-] Layers can be used to improve the security of the system; for example,
+	  	all user-input must go through a security layer before it can be transmitted
+	  	to other layers.
+	  	\item[-] Layers can help the system to be formed as a united whole.
+	  	\item[-] Layers helps the development of the system to be less complex, because
+	  	the functionality is integrated into their separate layers to be worked on separately.
+	\end{itemize}
+	Examples of layers that can be used in the research publication system:
+	\begin{itemize}
+		\item[-] A client-handler layer to handle what happens with user-input. Two different
+	  	client-handlers might be implemented for web- and Android applications.
+		\item[-] A display-handler layer to receive data from a data source and view it to the 	        user in an appealing manner. Two different display-handlers might be implemented for
+	  	web- and Android applications.
+		\item[-] A security-handler layer to verify user-input or file-uploads before it
+	  	transfers it to the server.
+		\item[-] A server-handler to modify the database or to retrieve data from the
+	  	database.
+		\item[-] etc.
+	\end{itemize}
 %----------------------------------------------------------------------------------------
 % To be done by: Hlengekile
 %----------------------------------------------------------------------------------------
