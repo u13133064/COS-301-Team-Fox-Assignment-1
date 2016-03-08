@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Introduction}
+\author{Jason Gordon & Jacques van Wyk}
+\date{February 2016}
+
+\begin{document}
+
+\maketitle
+\section{Open Issues}
+	
+\begin{itemize}	
+\item Should the admin be able to edit the meta-data of the papers or not?
+	\begin{itemize}
+	\item Should the research leader be able to edit the meta-data of papers in their research group?
+	\end{itemize}
+\item What server will be used to host our site? 
+\item Should we add any backup capabilities for the database?
+	\begin{itemize}
+	\item If so, will the admin be the only one able to backup the database?
+	\end{itemize}
+\item Is there a specific database that we need to use to store the information (i.e. MySQL, MongoDB, Neo4j etc.)?
+\item Should the system be able to support more than 100 users if, for example, another employee was employed by the Computer Science Department? (i.e. should the addition of users past 100 be allowed?)
+\item Should any user be able to add papers on behalf of other users? There may be risks involved when allowing this.
+\item If a new user is added and they are already an author of a paper (when they were not a user of the system) should the papers, which the new user is part of, be displayed on their profile?
+	\begin{itemize}
+	\item Will this new user receive units for the paper if it has already been published?
+	\end{itemize}
+\item If a paper has been "terminated" should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
+\end{itemize}
+
+\end{document}

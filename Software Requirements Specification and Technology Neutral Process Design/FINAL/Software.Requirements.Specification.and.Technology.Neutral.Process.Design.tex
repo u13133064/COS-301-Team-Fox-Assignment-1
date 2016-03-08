@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{float}
+\graphicspath{ {images/} }
 
 \begin{document}
 
@@ -35,14 +37,28 @@
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author(s):}\\
-Gian Paolo \textsc{Buffo} % Your name
+Gian Paolo \textsc{Buffo}\\ % Your name
+Jita \textsc{Hlengekile}\\
+Jacques \textsc{van Wyk}\\
+Jedd \textsc{Schneier}\\
+Jason \textsc{Gordon}\\
+Josef \textsc{Alberts}\\
+Sandile \textsc{Khumalo}\\
+Kudzai \textsc{Muranga}
 \end{flushleft}
 \end{minipage}
 ~
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Student number(s):} \\
-14446619 % Student number
+14446619\\ % Student number
+14077893\\
+12230091\\
+13133064\\
+14405025\\
+14395283 \\
+12031748\\
+13278012
 \end{flushright}
 \end{minipage}\\[4cm]
 
@@ -70,21 +86,51 @@ Gian Paolo \textsc{Buffo} % Your name
 % - GP
 %----------------------------------------------------------------------------------------
 
+\tableofcontents
+
+\newpage
 
 %----------------------------------------------------------------------------------------
-% Done by: Jason Gordon (edited by Gian Paolo Buffo)
+% Done by: Jason Gordon
 %----------------------------------------------------------------------------------------
 \section{Introduction}
 
-The requirements specification should ultimately contain sufficient information such that the system could be largely developed by a third party without further input. To this end the requirements must be precise and testable.
+This is the Software Requirements specification document for the system to keep record of research papers in the Computer Science Department of the University of Pretoria.
+This document includes sections such as:
+\begin{enumerate}
+    \item Vision for the system
+\begin{itemize}
+    \item This includes the projected vision and outcomes of the system and what the Computer Science Department aims to achieve with this project. 
+\end{itemize}
 
-The requirements need not be fully specified up-front. One might start with the vision, scope and architectural requirements, perform an upfront software architecture engineering phase and then iteratively elicit the detailed requirements for a use case; build, test and deploy the use case before adding the detailed requirements for the next use case.
+    \item Background to why the system is being developed
 
-Such an approach follows solid engineering practices for the core software infrastructure architecture with an agile software development approach within which the application functionality is developed iteratively.
+\begin{itemize}
+    \item This includes a discussion of the problem which the Computer Science Department is faced with in regard to keeping track of their research papers and how this system will find a solution to the problem being faced. 
+\end{itemize}
+
+    \item Architecture Requirements
+\setlength{\parindent}{2.5em}
+
+\begin{itemize}
+    \item This includes how the system will be accessed by the users of the system and through which platforms this will be done. Additionally the quality requirements of the system will be discussed as well as what external systems will be used to put this system together. Lastly it will include any constraints that the client has specified with regard to what must be used in the system. 
+\end{itemize}
+
+    \item Functional requirements and application design
+
+\begin{itemize}
+    \item This will include the functionality of the system that is required by the users of the system. 
+\end{itemize}
+    \item Open Issues
+\begin{itemize}
+    \item This section will discuss any requirements of the system that may be unclear or has not been specified. It will also include any inconsistencies that have been discovered in the requirements. 
+\end{itemize}
+\end{enumerate}
 
 %----------------------------------------------------------------------------------------
 % Done by: Gian Paolo Buffo
 %----------------------------------------------------------------------------------------
+\newpage
 \section{Vision}
 
 With the implementation of this system, the client is trying to create a central piece of software that can be used by all staff members of the Computer Science department of the University of Pretoria to maintain their academic publications.
@@ -110,6 +156,7 @@ A typical usage scenario of the system will be as follows:
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk (edited by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
+\newpage
 \section{Background}
 
 Our group, Team Fox, had a meeting with the client, Ms Vreda Pieterse, on Wednesday, 17 February 2016. The client discussed that she requires the implementation of a system which will allow researchers to keep track of their publications, as well as view statistical information regarding their Research Output Units.
@@ -122,13 +169,20 @@ In addition, the system will be used by the Computer Science department at the U
  	
 Furthermore, the project might serve as an example to other students on how to implement such a system or it can be used as a basic structure and starting point for other institutes.
 
+\newpage
 \section{Architecture Requirements}
 
 The software architecture requirements include the access and integration requirements, quality
 requirements and architectural constraints.
 
 %----------------------------------------------------------------------------------------
+% To be done by: Kudzai
+%----------------------------------------------------------------------------------------
+\subsection{Architectural Scope}
+
+%----------------------------------------------------------------------------------------
 % Done by: Hlengekile Jita (edited by Gian Paolo Buffo)
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
 \subsection{Access Channel Requirements}
 
@@ -187,7 +241,9 @@ While these platforms vary, they will both access the system through this API an
 
 %----------------------------------------------------------------------------------------
 % Done by: Josef Alberts (edited by Gian Paolo Buffo)
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
+\newpage
 \subsection{Quality Requirements}
 
 \subsubsection{Performance}
@@ -210,7 +266,9 @@ The system will be protected by a login system which will require a user to ente
 
 %----------------------------------------------------------------------------------------
 % Done by: Jedd Schneier (edited by Gian Paolo Buffo)
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
+\newpage
 \subsection{Integration Requirements}
 
 As the system will be accessed remotely through the Internet, it needs to integrate with web services. The GUI will be integrated online with HTML, JavaScript, CSS and any frameworks or libraries the developer decides to use as long as the system itself remains compatible on all browsers and does not use browser-exclusive functionality. The system must be integrated with the server, and thus make use of appropriate server-side technology such s AJAX and PHP. In summary, the system needs to be accessed anywhere on any browser through any device regardless of screen resolution, computer Operating System or hardware specification. Additionally, the system must work with these technologies in a robust and consistent manner. 
@@ -224,17 +282,33 @@ The system will generate reports in the form of spreadsheets and this must be in
 All integration needs to be seamless and not interfere with system performance. Security is also a major concern, and thus technologies integrated must not threaten the system's security as a whole or other technologies. The system must remain portable to any Android device and to any browser. As the system may grow and shrink as users are added and deleted, the system must be scalable. The data stored in the system will also increase and thus storage integration must be scalable as well. The system must remain reliable with each integrated technology added, and any errors must be able to be traced to the technology causing it.
 
 %----------------------------------------------------------------------------------------
-% To be done by: Jason Gordon
+% Done by: Jason Gordon
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
+\newpage
 \subsection{Architecture Constraints}
 
-This specifies any constraints the client may specify on the system architecture include
+There are not too many architectural constraints to this system. However some constraints do exist, such as:
 \begin{itemize}
-\item technologies which MUST be used,
-\item architectural patterns/frameworks which must be used (e.g. layering, Services Oriented Architectures, . . . )
-\item . . .
+\item The only technological constraint we have been given is the fact that we cannot link the system to any external resources besides for sending an email reminder, to the user, about the due date for their paper.
+	\begin{itemize}
+	\item The only constraint with regard to this would be that we would not be able to ease the way in which the user could keep track of their due dates by \textit{e.g. Adding the date directly to their google calendar}. Thus the user would manually need to add the date to their calendar or create a reminder for themselves (if they want to). Another problem could be that the email reminder that is sent by the system could be cluttered between all the other emails that have been received, by the user, and thus the user may forget about the reminder that was sent by the system. 
+	\end{itemize}
+\item The role of the user in the system \textit{(i.e. Author, Research Leader, Administrator, Head of Department)} determines their permissions on the system.
+	\begin{itemize}
+	\item Author - May only edit metadata about a paper they are working on or have already published.
+	\item Research Leader - May see all papers in his or her research group.
+	\item Administrator/Head of Department - Should be able to view everything in the system (including all papers published, in progress or discontinued) as well as the number of units each user has earned. They may also add or remove users.
+	\end{itemize}
+\item The system must only cater for the Computer Science Department of the University of Pretoria. Users may not be anyone else outside the department. 
+\item When viewing profiles of other users, one may not see the papers of the other users - despite the progress of these papers - or the number of units they have earned in total. 
+\item However when viewing ones own profile, one may view their papers - regardless of progress - and also may view the number of units they have earned in total. 
+\item Developing the system for the web can be very different from developing it for Android. This does, however, depend on the language(s) used to develop the Android application. If it is coded using web based languages it would be easier to port it to android. However if it is developed using Java the web-based system would not be very portable to Android. 
+\item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
+\item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
 \end{itemize}
 
+\newpage
 \section{Functional requirements and application design}
 This section discusses the application functionality required by users (and other stakeholders).
 
@@ -283,6 +357,7 @@ Nice to have
 %----------------------------------------------------------------------------------------
 % Done by: Kudzai Muranga (edited by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
+\newpage
 \subsection{Use case/Services contracts}
 Adding a conference paper:
 \begin{itemize}
@@ -302,6 +377,12 @@ Adding a conference paper:
     \begin{itemize}
         \item User can create a paper but does not have to be an author
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Adding a conference paper}
+    \includegraphics[width=1\textwidth]{use-case/adding-a-conference-paper.png}
+    \end{figure}
 \end{itemize}
 Adding an author to a conference paper:
 \begin{itemize}
@@ -319,6 +400,12 @@ Adding an author to a conference paper:
     \begin{itemize}
         \item Author does not have to be a user
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Adding an author to a conference paper}
+    \includegraphics[width=1\textwidth]{use-case/adding-an-author-to-a-conference-paper.png}
+    \end{figure}
 \end{itemize}
 User being able to see all papers they have added or co-authored:
 \begin{itemize}
@@ -331,6 +418,12 @@ User being able to see all papers they have added or co-authored:
     \begin{itemize}
         \item User will be able to view their papers
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Users being able to view all authored/co-authored papers}
+    \includegraphics[width=1\textwidth]{use-case/user-viewing-papers.png}
+    \end{figure}
 \end{itemize}
 Adding a researcher to a research group:
 \begin{itemize}
@@ -342,6 +435,12 @@ Adding a researcher to a research group:
     \begin{itemize}
         \item Researcher added to research group
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Adding a researcher to a research group}
+    \includegraphics[width=1\textwidth]{use-case/adding-a-researcher-to-a-research-group.png}
+    \end{figure}
 \end{itemize}
 The state of the paper (submitted, waiting, rejected, published):
 \begin{itemize}
@@ -353,6 +452,12 @@ The state of the paper (submitted, waiting, rejected, published):
     \begin{itemize}
         \item The user can view the status of the paper
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Viewing the current paper state}
+    \includegraphics[width=1\textwidth]{use-case/user-viewing-paper-state.png}
+    \end{figure}
 \end{itemize}
 Editing metadata:
 \begin{itemize}
@@ -371,6 +476,12 @@ Editing metadata:
         \item The head of department can edit the meta data of any paper in the system
         \item A research leader can edit the meta data of any paper in their research group
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Editing metadata}
+    \includegraphics[width=1\textwidth]{use-case/editing-metadata.png}
+    \end{figure}
 \end{itemize}
 Research leader being able to view all papers and their progress:
 \begin{itemize}
@@ -386,6 +497,12 @@ Research leader being able to view all papers and their progress:
     \begin{itemize}
         \item The head of department and administrator can also view the papers in the research group
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Research leader being able to view relevant paper progress}
+    \includegraphics[width=1\textwidth]{use-case/research-leader-viewing.png}
+    \end{figure}
 \end{itemize}
 Add and remove authors at any point in the life cycle of the paper:
 \begin{itemize}
@@ -397,6 +514,12 @@ Add and remove authors at any point in the life cycle of the paper:
     \begin{itemize}
         \item The user would be successful in adding or removing authors to or from the paper
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{Adding and removing authors at any point in the life cycle of a paper}
+    \includegraphics[width=1\textwidth]{use-case/adding-and-removing-authors.png}
+    \end{figure}
 \end{itemize}
 Show history of papers:
 \begin{itemize}
@@ -438,6 +561,12 @@ Head Of Department being able to view all papers:
     \begin{itemize}
         \item The head of department can successfully view all papers
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{H.O.D. being able to view all papers}
+    \includegraphics[width=1\textwidth]{use-case/hod-viewing-papers.png}
+    \end{figure}
 \end{itemize}
 The sequence of authors(primary,second etc.):
 \begin{itemize}
@@ -529,6 +658,12 @@ Head of department being able to view all units per staff:
     \begin{itemize}
         \item head of department able to view the units allocated to each staff
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{H.O.D. being able to view units per staff member}
+    \includegraphics[width=1\textwidth]{use-case/hod-viewing-units.png}
+    \end{figure}
 \end{itemize}
 An Administrator having complete access to the portal even on behalf of other users:
 \begin{itemize}
@@ -541,6 +676,12 @@ An Administrator having complete access to the portal even on behalf of other us
     \begin{itemize}
         \item The administrator successfully have complete access to the portal
     \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    \caption{An administrator having access to user profiles}
+    \includegraphics[width=1\textwidth]{use-case/administrator-access.png}
+    \end{figure}
 \end{itemize}
 Profile of the researcher:
 \begin{itemize}
@@ -567,34 +708,310 @@ A user who is not an author adding a paper for someone else:
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
-% To be done by: GP & Hlengekile
+% Done by: Gian Paolo Buffo and Hlengekile Jita
 %----------------------------------------------------------------------------------------
+\newpage
 \subsection{Required functionality}
 
+This section describes the functionality required of the system, and illustrates these requirements by means of use case diagrams.
+
+\begin{figure}[H]
+    \centering
+    \caption{Add a Paper}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__addPaper.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Add Metadata}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__addMetadata.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Edit Paper Data}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__editPaperData.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Authored Papers}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewAuthoredPapers.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Research Group Papers}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewResearchGroupPapers.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View All Papers}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewAllPapers.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Add User}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__addUser.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Remove User}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__removeUser.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Add Research Group User}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__addResearchGroupUser.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Remove Research Group User}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__removeResearchGroupUser.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Research Group Progress}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewResearchGroupProgress.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Research Group Users}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewResearchGroupUsers.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Units Earned}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewUnitsEarned.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Edit Profile}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__editProfile.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Profile}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewProfile.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View All Users}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewAllUsers.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Log In}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__logIn.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Log Out}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__logOut.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{View Activity Log}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__viewActivityLogs.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Back Up System Info}
+    \includegraphics[width=1\textwidth]{req-func/uc__The_System__backupSystemInfo.jpg}
+\end{figure}
+
 %----------------------------------------------------------------------------------------
-% To be done by: Jedd & JoDan
+% Done by: Jedd Schneier and Josef Alberts (compiled by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
+\newpage
 \subsection{Process specifications}
 
-%----------------------------------------------------------------------------------------
-% To be done by: Kudzai & Sandile
-%----------------------------------------------------------------------------------------
-\subsection{Domain Model}
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=130mm]{domainModel.jpg}
-\caption{The domain model \label{overflow}}
+This section illustrates the requirements around processes in the system which need to be followed. Activity diagrams are used to illustrate these process specifications.
+
+\begin{figure}[H]
+    \centering
+    \caption{Log In}
+    \includegraphics[width=1\textwidth]{process-spec/Activity_Login.jpg}
 \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Add Paper}
+    \includegraphics[width=1\textwidth]{process-spec/Activity_AddPaper.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Edit Paper}
+    \includegraphics[width=1\textwidth]{process-spec/Activity_EditPaper.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Generate Report}
+    \includegraphics[width=1\textwidth]{process-spec/generateReportActivityDiagram.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Log Out}
+    \includegraphics[width=1\textwidth]{process-spec/logOutActivityDiagraml.jpg}
+\end{figure}
+
 %----------------------------------------------------------------------------------------
-% To be done by: Jacques & Jason
+% Done by: Kudzai Muranga and Sandile Khumalo (compiled by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
+\newpage
+\subsection{Domain Model}
+
+In this section, the data structure requirements of the system are specified in a technology neutral way, by making use of UML class diagrams.
+
+\begin{figure}[H]
+    \centering
+    \caption{Domain Model}
+    \includegraphics[width=1\textwidth]{domainModel.jpg}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+% Done by: Jacques van Wyk
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Architectural Patterns or Styles}
+	Our research team have decided to use the MVC(Model-View-Controller)- and
+	Layering architectural patterns for the research publication system for the mini
+	project. Since the system should have a web-interface and a mobile Android interface
+	it is necessary to divide the system into parts where the two interfaces are independent
+	of each other, but both can have concurrent access to a central database. In addition,
+	this is necessary, because the interfaces will likely use different client-side
+	technologies for the graphical user interface and client logic.
+	\newline
+	\newline
+	The structure of MVC in the system:
+	\begin{itemize}
+		\item Model
+		\begin{itemize}
+			\item[] The Model represents the database and how the user- and research
+			data is structured, organized and stored in the database on the server-
+			side. Furthermore, it provides an interface through the written server
+			software by which the model can be manipulated from user interaction
+			through the controller.
+		\end{itemize}
+		\item Controller
+		\begin{itemize}
+			\item[] The controller partly represents the logic and the user-functionality
+			of the system and is downloaded or exists on the client's side of the
+			system. The controller interfaces with the model and the view
+			where the controller;for example, verifies user-input and determines the validity
+			of it; consequently, the controller manipulates the model through
+			the server-side software interface and the user's view is updated
+			with the updated data stored in the model.
+		\end{itemize}
+		\item View
+		\begin{itemize}
+			\item[] The view represents the GUI(Graphical User Interface) that is displayed
+			to the user and how it looks to the user when he/she interacts with it.
+			The view gets updated when the model has been manipulated by some user's
+			interaction with the controller.
+		\end{itemize}
+	\end{itemize}
+	The MVC architectural pattern simplifies and modularizes the design of the research
+	publication system in the following way:
+	\begin{itemize}
+		\item[-] The GUI's of the website- and Android applications can be developed
+	  	independent from each other.
+	  	\item[-] The client-side software and functionality of the website- and Android
+	  	applications can be developed independent from each other.
+	  	\item[-] The database and server software can be developed independent from which
+	  	client-side programming languages will be used and can be redistributed
+	  	to work with other controllers and views.
+	\end{itemize}
+	The Layering architectural pattern makes use of a set of programmed layers. Each
+	layer has been implemented to provide a certain unique functionality and can be used or
+	reused by certain other layers.
+	By making use of the Layering architectural pattern it can make the development
+	life cycle of the research publication system more efficient in the following ways:
+	\begin{itemize}
+		\item[-] Layers can be tested and debugged individually.
+	  	\item[-] Layers can be reused in other layered systems.
+	  	\item[-] Layers can be updated and improved to replace the older ones.
+	  	\item[-] Layers can be used to improve the security of the system; for example,
+	  	all user-input must go through a security layer before it can be transmitted
+	  	to other layers.
+	  	\item[-] Layers can help the system to be formed as a united whole.
+	  	\item[-] Layers helps the development of the system to be less complex, because
+	  	the functionality is integrated into their separate layers to be worked on separately.
+	\end{itemize}
+	Examples of layers that can be used in the research publication system:
+	\begin{itemize}
+		\item[-] A client-handler layer to handle what happens with user-input. Two different
+	  	client-handlers might be implemented for web- and Android applications.
+		\item[-] A display-handler layer to receive data from a data source and view it to the 	        user in an appealing manner. Two different display-handlers might be implemented for
+	  	web- and Android applications.
+		\item[-] A security-handler layer to verify user-input or file-uploads before it
+	  	transfers it to the server.
+		\item[-] A server-handler to modify the database or to retrieve data from the
+	  	database.
+		\item[-] etc.
+	\end{itemize}
+%----------------------------------------------------------------------------------------
+% To be done by: Hlengekile
+%----------------------------------------------------------------------------------------
+\section{Architectural Tactics or Strategies}
+
+%----------------------------------------------------------------------------------------
+% To be done by: Jason and Sandile
+%----------------------------------------------------------------------------------------
+\section{Use of Reference Architectures and Frameworks}
+
+%----------------------------------------------------------------------------------------
+% To be done by: Josef & GP
+%----------------------------------------------------------------------------------------
+\section{Access and Integration Channels}
+
+%----------------------------------------------------------------------------------------
+% To be done by: Jedd
+%----------------------------------------------------------------------------------------
+\section{Technologies}
+
+%----------------------------------------------------------------------------------------
+% Done by: Jacques van Wyk and Jason Gordon
+%----------------------------------------------------------------------------------------
+\newpage
 \section{Open Issues}
 
-Discuss in this section
-\begin{itemize}
-\item any aspects of the requirements which still need to be specified,
-\item around which clarification is still required, as well as
-\item any discovered inconsistencies in the requirements.
+\begin{itemize}	
+\item Should the admin be able to edit the meta-data of the papers or not?
+	\begin{itemize}
+	\item Should the research leader be able to edit the meta-data of papers in their research group?
+	\end{itemize}
+\item What server will be used to host our site? 
+\item Should we add any backup capabilities for the database?
+	\begin{itemize}
+	\item If so, will the admin be the only one able to backup the database?
+	\end{itemize}
+\item Is there a specific database that we need to use to store the information (i.e. MySQL, MongoDB, Neo4j etc.)?
+\item Should the system be able to support more than 100 users if, for example, another employee was employed by the Computer Science Department? (i.e. should the addition of users past 100 be allowed?)
+\item Should any user be able to add papers on behalf of other users? There may be risks involved when allowing this.
+\item If a new user is added and they are already an author of a paper (when they were not a user of the system) should the papers, which the new user is part of, be displayed on their profile?
+	\begin{itemize}
+	\item Will this new user receive units for the paper if it has already been published?
+	\end{itemize}
+\item If a paper has been "terminated" should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
 \end{itemize}
 
 

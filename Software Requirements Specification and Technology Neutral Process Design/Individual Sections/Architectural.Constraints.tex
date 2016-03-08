@@ -1,0 +1,24 @@
+\documentclass{article}
+\author{Jason Gordon}
+\title{Architectural Constraints}
+
+\begin{document}
+\maketitle
+
+\section{Architectural Constraints}
+There are not too many architectural constraints to this system. However some constraints do exist, such as:
+\begin{itemize}
+\item The role of the user in the system \textit{(i.e. Author, Research Leader, Administrator, Head of Department)} determines their permissions on the system.
+	\begin{itemize}
+	\item Author - May only edit metadata about a paper they are working on or have already published.
+	\item Research Leader - May see all papers in his or her research group.
+	\item Administrator/Head of Department - Should be able to view everything in the system (including all papers published, in progress or discontinued) as well as the number of units each user has earned. They may also add or remove users.
+	\end{itemize}
+\item The system must only cater for the Computer Science Department of the University of Pretoria. Users may not be anyone else outside the department. 
+\item When viewing profiles of other users, one may not see the papers of the other users - despite the progress of these papers - or the number of units they have earned in total. 
+\item However when viewing ones own profile, one may view their papers - regardless of progress - and also may view the number of units they have earned in total. 
+\item Developing the system for the web can be very different from developing it for Android. This does, however, depend on the language(s) used to develop the Android application. If it is coded using web based languages it would be easier to port it to android. However if it is developed using Java the web-based system would not be very portable to Android. 
+\item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
+\item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
+\end{itemize}
+\end{document}
