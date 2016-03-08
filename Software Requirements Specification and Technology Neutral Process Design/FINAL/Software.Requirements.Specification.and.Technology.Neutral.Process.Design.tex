@@ -40,7 +40,7 @@
 Gian Paolo \textsc{Buffo}\\ % Your name
 Jita \textsc{Hlengekile}\\
 Jacques \textsc{van Wyk}\\
-Jedd \textsc{Schneier}\\
+Jedd \textsc{Shneier}\\
 Jason \textsc{Gordon}\\
 Josef \textsc{Alberts}\\
 Sandile \textsc{Khumalo}\\
@@ -911,6 +911,25 @@ In this section, the data structure requirements of the system are specified in 
 % To be done by: Jedd
 %----------------------------------------------------------------------------------------
 \section{Technologies}
+\subsection{Programming languages}
+\begin{itemize}	
+\item Interface
+	\begin{itemize}
+	\item HTML:  The system will be mainly web based, and will need to be integrated with Andriod for mobile deployment. Thus the 	interface should be represented with HTML 5 as it multplatform and scalable with future technologies. 
+	\item CSS and Bootstrap:  Styling the web based interface should be handled through CSS 3 and the Bootstrap framework.      Bootstrap allows for a responsive, mobile interface with a profissional appearance. Importantly its' current popularity allows for future upgrades and scalable interface design.
+\item Java Script , AngualrJS and Node.js :  The interface needs to remain robust, intuitive and responsive. To achieve  a responsive environment AngularJS wi l be used. Node.js is designed to build scalable network applications and using these frameworks our system will remain modurlized and will allow us to implement dependency injection.
+			
+	\end{itemize}
+\item Server
+The server side processing  needs to be handled by a suitable scripting langauge however the debate between the felxible Python and the standard PHP can be extensive. Below is a solution. 
+	\begin{itemize}
+	
+	\item PHP: Commonly installed environment,embedding in HTML ,large user base.
+	 \item Python : More secure then PHP, flexible with extensive add-on modules,tends to lead to much more scalable application
+	\item Solution: WPHP is a WSGI->PHP gateway that "allows you to run PHP processes inside of Python, using a WSGI gateway". In summary using both PHP and Python to acheive best of both options.
+  
+\end{itemize}
+
 
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk and Jason Gordon
