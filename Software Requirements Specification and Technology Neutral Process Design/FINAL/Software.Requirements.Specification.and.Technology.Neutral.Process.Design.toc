@@ -1,28 +1,33 @@
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
-\contentsline {section}{\numberline {2}Vision}{3}{section.2}
-\contentsline {section}{\numberline {3}Background}{5}{section.3}
-\contentsline {section}{\numberline {4}Architecture Requirements}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Architectural Scope}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Access Channel Requirements}{6}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Quality Requirements}{9}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Performance}{9}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Reliability}{9}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Scalability}{9}{subsubsection.4.3.3}
-\contentsline {subsubsection}{\numberline {4.3.4}Usability}{9}{subsubsection.4.3.4}
-\contentsline {subsubsection}{\numberline {4.3.5}Auditability}{10}{subsubsection.4.3.5}
-\contentsline {subsubsection}{\numberline {4.3.6}Security}{10}{subsubsection.4.3.6}
-\contentsline {subsection}{\numberline {4.4}Integration Requirements}{11}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Architecture Constraints}{13}{subsection.4.5}
-\contentsline {section}{\numberline {5}Functional requirements and application design}{15}{section.5}
-\contentsline {subsection}{\numberline {5.1}Use case prioritization}{15}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Use case/Services contracts}{17}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Required functionality}{30}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Process specifications}{40}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Domain Model}{45}{subsection.5.5}
-\contentsline {section}{\numberline {6}Architectural Patterns or Styles}{46}{section.6}
-\contentsline {section}{\numberline {7}Architectural Tactics or Strategies}{46}{section.7}
-\contentsline {section}{\numberline {8}Use of Reference Architectures and Frameworks}{46}{section.8}
-\contentsline {section}{\numberline {9}Access and Integration Channels}{46}{section.9}
-\contentsline {section}{\numberline {10}Technologies}{46}{section.10}
-\contentsline {subsection}{\numberline {10.1}Programming languages}{46}{subsection.10.1}
-\contentsline {section}{\numberline {11}Open Issues}{47}{section.11}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Vision}{4}{section.2}
+\contentsline {section}{\numberline {3}Background}{6}{section.3}
+\contentsline {section}{\numberline {4}Architecture Requirements}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Architectural Scope}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Access Channel Requirements}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Quality Requirements}{10}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Performance}{10}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Reliability}{10}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Scalability}{10}{subsubsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.4}Usability}{10}{subsubsection.4.3.4}
+\contentsline {subsubsection}{\numberline {4.3.5}Auditability}{11}{subsubsection.4.3.5}
+\contentsline {subsubsection}{\numberline {4.3.6}Security}{11}{subsubsection.4.3.6}
+\contentsline {subsection}{\numberline {4.4}Integration Requirements}{12}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Architecture Constraints}{14}{subsection.4.5}
+\contentsline {section}{\numberline {5}Functional requirements and application design}{16}{section.5}
+\contentsline {subsection}{\numberline {5.1}Use case prioritization}{16}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Use case/Services contracts}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Required functionality}{31}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Process specifications}{41}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Domain Model}{46}{subsection.5.5}
+\contentsline {section}{\numberline {6}Architectural Patterns or Styles}{47}{section.6}
+\contentsline {section}{\numberline {7}Architectural Tactics or Strategies}{47}{section.7}
+\contentsline {section}{\numberline {8}Use of Reference Architectures and Frameworks}{47}{section.8}
+\contentsline {section}{\numberline {9}Access and Integration Channels}{47}{section.9}
+\contentsline {section}{\numberline {10}Technologies}{47}{section.10}
+\contentsline {subsection}{\numberline {10.1}Programming languages}{47}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Framework}{48}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Database Systems}{48}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Operating Systems}{49}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Server technologies}{49}{subsection.10.5}
+\contentsline {subsection}{\numberline {10.6}Other technologies}{49}{subsection.10.6}
+\contentsline {section}{\numberline {11}Open Issues}{50}{section.11}

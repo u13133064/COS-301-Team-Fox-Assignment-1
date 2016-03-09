@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.29)  8 MAR 2016 20:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.29)  9 MAR 2016 15:13
 entering extended mode
 **Software.Requirements.Specification.and.Technology.Neutral.Process.Design.tex
 
@@ -458,22 +458,25 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("C:\Users\User\Documents\GitHub\COS-301-Team-Fox-Assignment-1\Software Require
 ments Specification and Technology Neutral Process Design\FINAL\Software.Requir
-ements.Specification.and.Technology.Neutral.Process.Design.toc")
-\tf@toc=\write4
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+ements.Specification.and.Technology.Neutral.Process.Design.toc"pdfTeX warning (
+ext4): destination with the same identifier (name{page.1}) has been already use
+d, duplicate ignored
 <to be read again> 
                    \relax 
-l.91 \newpage
-              [1]
+l.33 ...umberline {11}Open Issues}{50}{section.11}
+                                                   [1])
+\tf@toc=\write4
+ [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
- [2] [3] [4] [5] [6] [7]
+ [3] [4] [5]
+[6] [7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 234--237
 
  []
@@ -490,20 +493,20 @@ Overfull \hbox (3.69987pt too wide) in paragraph at lines 239--240
  _ introduction .$
  []
 
-[8] [9] [10] [11] [12] [13] [14]
+[9] [10] [11] [12] [13] [14] [15]
 Overfull \hbox (6.86775pt too wide) in paragraph at lines 312--312
 []\OT1/cmr/bx/n/17.28 Functional re-quire-ments and ap-pli-ca-tion de-
  []
 
-[15] [16]
-<images/use-case/adding-a-conference-paper.png, id=228, 677.53125pt x 426.09187
+[16] [17]
+<images/use-case/adding-a-conference-paper.png, id=257, 677.53125pt x 426.09187
 pt>
 File: images/use-case/adding-a-conference-paper.png Graphic file (type png)
  <use images/use-case/adding-a-conference-paper.png>
 Package pdftex.def Info: images/use-case/adding-a-conference-paper.png used on 
 input line 384.
 (pdftex.def)             Requested size: 390.0pt x 245.27399pt.
- [17pdfTeX warning (ext4): destination with the same identifier (name{figure.1}
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -513,7 +516,7 @@ l.393         \item U
 cuments/GitHub/COS-301-Team-Fox-Assignment-1/Software Requirements Specificatio
 n and Technology Neutral Process Design/FINAL/images/use-case/adding-a-conferen
 ce-paper.png>]
-<images/use-case/adding-an-author-to-a-conference-paper.png, id=234, 670.00313p
+<images/use-case/adding-an-author-to-a-conference-paper.png, id=264, 670.00313p
 t x 402.00188pt>
 File: images/use-case/adding-an-author-to-a-conference-paper.png Graphic file (
 type png)
@@ -523,14 +526,14 @@ Package pdftex.def Info: images/use-case/adding-an-author-to-a-conference-paper
 .png used on input line 407.
 (pdftex.def)             Requested size: 390.0pt x 233.99547pt.
 
-<images/use-case/user-viewing-papers.png, id=235, 657.95813pt x 389.95688pt>
+<images/use-case/user-viewing-papers.png, id=265, 657.95813pt x 389.95688pt>
 File: images/use-case/user-viewing-papers.png Graphic file (type png)
 
 <use images/use-case/user-viewing-papers.png>
 Package pdftex.def Info: images/use-case/user-viewing-papers.png used on input 
 line 425.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2}
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.2}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -539,7 +542,7 @@ l.427 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
 NAL/images/use-case/adding-an-author-to-a-conference-paper.png>]
-<images/use-case/adding-a-researcher-to-a-research-group.png, id=242, 657.95813
+<images/use-case/adding-a-researcher-to-a-research-group.png, id=271, 657.95813
 pt x 389.95688pt>
 File: images/use-case/adding-a-researcher-to-a-research-group.png Graphic file 
 (type png)
@@ -548,7 +551,7 @@ File: images/use-case/adding-a-researcher-to-a-research-group.png Graphic file
 Package pdftex.def Info: images/use-case/adding-a-researcher-to-a-research-grou
 p.png used on input line 442.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -557,14 +560,14 @@ l.444 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
 NAL/images/use-case/user-viewing-papers.png>]
-<images/use-case/user-viewing-paper-state.png, id=248, 657.95813pt x 389.95688p
+<images/use-case/user-viewing-paper-state.png, id=277, 657.95813pt x 389.95688p
 t>
 File: images/use-case/user-viewing-paper-state.png Graphic file (type png)
  <use images/use-case/user-viewing-paper-state.png>
 Package pdftex.def Info: images/use-case/user-viewing-paper-state.png used on i
 nput line 459.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -573,14 +576,14 @@ l.461 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
 NAL/images/use-case/adding-a-researcher-to-a-research-group.png>]
-<images/use-case/editing-metadata.png, id=254, 657.95813pt x 389.95688pt>
+<images/use-case/editing-metadata.png, id=283, 657.95813pt x 389.95688pt>
 File: images/use-case/editing-metadata.png Graphic file (type png)
 
 <use images/use-case/editing-metadata.png>
 Package pdftex.def Info: images/use-case/editing-metadata.png used on input lin
 e 483.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -589,14 +592,14 @@ l.485 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
 NAL/images/use-case/user-viewing-paper-state.png>]
-<images/use-case/research-leader-viewing.png, id=260, 657.95813pt x 389.95688pt
+<images/use-case/research-leader-viewing.png, id=289, 657.95813pt x 389.95688pt
 >
 File: images/use-case/research-leader-viewing.png Graphic file (type png)
  <use images/use-case/research-leader-viewing.png>
 Package pdftex.def Info: images/use-case/research-leader-viewing.png used on in
 put line 504.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -605,14 +608,14 @@ l.506 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
 NAL/images/use-case/editing-metadata.png>]
-<images/use-case/adding-and-removing-authors.png, id=266, 657.95813pt x 389.956
+<images/use-case/adding-and-removing-authors.png, id=295, 657.95813pt x 389.956
 88pt>
 File: images/use-case/adding-and-removing-authors.png Graphic file (type png)
  <use images/use-case/adding-and-removing-authors.png>
 Package pdftex.def Info: images/use-case/adding-and-removing-authors.png used o
 n input line 521.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [23pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -620,7 +623,7 @@ n input line 521.
 l.523 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
-NAL/images/use-case/research-leader-viewing.png>] [24pdfTeX warning (ext4): des
+NAL/images/use-case/research-leader-viewing.png>] [25pdfTeX warning (ext4): des
 tination with the same identifier (name{figure.8}) has been already used, dupli
 cate ignored
 
@@ -630,14 +633,14 @@ l.552 \end{itemize}
                     <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment
 -1/Software Requirements Specification and Technology Neutral Process Design/FI
 NAL/images/use-case/adding-and-removing-authors.png>]
-<images/use-case/hod-viewing-papers.png, id=278, 657.95813pt x 389.95688pt>
+<images/use-case/hod-viewing-papers.png, id=307, 657.95813pt x 389.95688pt>
 File: images/use-case/hod-viewing-papers.png Graphic file (type png)
 
 <use images/use-case/hod-viewing-papers.png>
 Package pdftex.def Info: images/use-case/hod-viewing-papers.png used on input l
 ine 568.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.9}
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.9}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -646,15 +649,15 @@ l.586         \item U
                      nits must be assigned to the paper <C:/Users/User/Document
 s/GitHub/COS-301-Team-Fox-Assignment-1/Software Requirements Specification and 
 Technology Neutral Process Design/FINAL/images/use-case/hod-viewing-papers.png>
-] [26]
-<images/use-case/hod-viewing-units.png, id=288, 657.95813pt x 389.95688pt>
+] [27]
+<images/use-case/hod-viewing-units.png, id=317, 657.95813pt x 389.95688pt>
 File: images/use-case/hod-viewing-units.png Graphic file (type png)
 
 <use images/use-case/hod-viewing-units.png>
 Package pdftex.def Info: images/use-case/hod-viewing-units.png used on input li
 ne 665.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.10
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -663,14 +666,14 @@ l.672         \item T
                      he user must be an administrator <C:/Users/User/Documents/
 GitHub/COS-301-Team-Fox-Assignment-1/Software Requirements Specification and Te
 chnology Neutral Process Design/FINAL/images/use-case/hod-viewing-units.png>]
-<images/use-case/administrator-access.png, id=294, 657.95813pt x 389.95688pt>
+<images/use-case/administrator-access.png, id=323, 657.95813pt x 389.95688pt>
 File: images/use-case/administrator-access.png Graphic file (type png)
 
 <use images/use-case/administrator-access.png>
 Package pdftex.def Info: images/use-case/administrator-access.png used on input
  line 683.
 (pdftex.def)             Requested size: 390.0pt x 231.14955pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.11
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.11
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -678,8 +681,8 @@ Package pdftex.def Info: images/use-case/administrator-access.png used on input
 l.703     \end{itemize}
                         <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assign
 ment-1/Software Requirements Specification and Technology Neutral Process Desig
-n/FINAL/images/use-case/administrator-access.png>] [29]
-<images/req-func/uc__The_System__addPaper.jpg, id=304, 712.6625pt x 277.035pt>
+n/FINAL/images/use-case/administrator-access.png>] [30]
+<images/req-func/uc__The_System__addPaper.jpg, id=334, 712.6625pt x 277.035pt>
 File: images/req-func/uc__The_System__addPaper.jpg Graphic file (type jpg)
 
 <use images/req-func/uc__The_System__addPaper.jpg>
@@ -687,7 +690,7 @@ Package pdftex.def Info: images/req-func/uc__The_System__addPaper.jpg used on i
 nput line 721.
 (pdftex.def)             Requested size: 390.0pt x 151.60458pt.
 
-<images/req-func/uc__The_System__addMetadata.jpg, id=305, 742.775pt x 387.4475p
+<images/req-func/uc__The_System__addMetadata.jpg, id=335, 742.775pt x 387.4475p
 t>
 File: images/req-func/uc__The_System__addMetadata.jpg Graphic file (type jpg)
  <use images/req-func/uc__The_System__addMetadata.jpg>
@@ -695,7 +698,7 @@ Package pdftex.def Info: images/req-func/uc__The_System__addMetadata.jpg used o
 n input line 727.
 (pdftex.def)             Requested size: 390.0pt x 203.43663pt.
 
-<images/req-func/uc__The_System__editPaperData.jpg, id=306, 665.48625pt x 275.0
+<images/req-func/uc__The_System__editPaperData.jpg, id=336, 665.48625pt x 275.0
 275pt>
 File: images/req-func/uc__The_System__editPaperData.jpg Graphic file (type jpg)
 
@@ -703,7 +706,7 @@ File: images/req-func/uc__The_System__editPaperData.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/req-func/uc__The_System__editPaperData.jpg used
  on input line 733.
 (pdftex.def)             Requested size: 390.0pt x 161.1779pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.12
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.12
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -720,7 +723,7 @@ equirements Specification and Technology Neutral Process Design/FINAL/images/re
 q-func/uc__The_System__addPaper.jpg> <C:/Users/User/Documents/GitHub/COS-301-Te
 am-Fox-Assignment-1/Software Requirements Specification and Technology Neutral 
 Process Design/FINAL/images/req-func/uc__The_System__addMetadata.jpg>]
-<images/req-func/uc__The_System__viewAuthoredPapers.jpg, id=314, 718.685pt x 29
+<images/req-func/uc__The_System__viewAuthoredPapers.jpg, id=343, 718.685pt x 29
 0.08376pt>
 File: images/req-func/uc__The_System__viewAuthoredPapers.jpg Graphic file (type
  jpg)
@@ -729,7 +732,7 @@ Package pdftex.def Info: images/req-func/uc__The_System__viewAuthoredPapers.jpg
  used on input line 739.
 (pdftex.def)             Requested size: 390.0pt x 157.42192pt.
 
-<images/req-func/uc__The_System__viewResearchGroupPapers.jpg, id=315, 1349.04pt
+<images/req-func/uc__The_System__viewResearchGroupPapers.jpg, id=344, 1349.04pt
  x 868.24374pt>
 File: images/req-func/uc__The_System__viewResearchGroupPapers.jpg Graphic file 
 (type jpg)
@@ -738,7 +741,7 @@ File: images/req-func/uc__The_System__viewResearchGroupPapers.jpg Graphic file
 Package pdftex.def Info: images/req-func/uc__The_System__viewResearchGroupPaper
 s.jpg used on input line 745.
 (pdftex.def)             Requested size: 390.0pt x 251.00258pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.14
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.14
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -756,7 +759,7 @@ q-func/uc__The_System__editPaperData.jpg> <C:/Users/User/Documents/GitHub/COS-3
 01-Team-Fox-Assignment-1/Software Requirements Specification and Technology Neu
 tral Process Design/FINAL/images/req-func/uc__The_System__viewAuthoredPapers.jp
 g>]
-<images/req-func/uc__The_System__viewAllPapers.jpg, id=322, 1381.16pt x 685.561
+<images/req-func/uc__The_System__viewAllPapers.jpg, id=351, 1381.16pt x 685.561
 25pt>
 File: images/req-func/uc__The_System__viewAllPapers.jpg Graphic file (type jpg)
 
@@ -765,14 +768,14 @@ Package pdftex.def Info: images/req-func/uc__The_System__viewAllPapers.jpg used
  on input line 751.
 (pdftex.def)             Requested size: 390.0pt x 193.57726pt.
 
-<images/req-func/uc__The_System__addUser.jpg, id=323, 1475.5125pt x 670.505pt>
+<images/req-func/uc__The_System__addUser.jpg, id=352, 1475.5125pt x 670.505pt>
 File: images/req-func/uc__The_System__addUser.jpg Graphic file (type jpg)
 
 <use images/req-func/uc__The_System__addUser.jpg>
 Package pdftex.def Info: images/req-func/uc__The_System__addUser.jpg used on in
 put line 757.
 (pdftex.def)             Requested size: 390.0pt x 177.22258pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.16
+ [33pdfTeX warning (ext4): destination with the same identifier (name{figure.16
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -790,14 +793,14 @@ q-func/uc__The_System__viewResearchGroupPapers.jpg> <C:/Users/User/Documents/Gi
 tHub/COS-301-Team-Fox-Assignment-1/Software Requirements Specification and Tech
 nology Neutral Process Design/FINAL/images/req-func/uc__The_System__viewAllPape
 rs.jpg>]
-<images/req-func/uc__The_System__removeUser.jpg, id=330, 895.345pt x 566.115pt>
+<images/req-func/uc__The_System__removeUser.jpg, id=359, 895.345pt x 566.115pt>
 File: images/req-func/uc__The_System__removeUser.jpg Graphic file (type jpg)
 <use images/req-func/uc__The_System__removeUser.jpg>
 Package pdftex.def Info: images/req-func/uc__The_System__removeUser.jpg used on
  input line 763.
 (pdftex.def)             Requested size: 390.0pt x 246.59492pt.
 
-<images/req-func/uc__The_System__addResearchGroupUser.jpg, id=331, 913.4125pt x
+<images/req-func/uc__The_System__addResearchGroupUser.jpg, id=360, 913.4125pt x
  618.31pt>
 File: images/req-func/uc__The_System__addResearchGroupUser.jpg Graphic file (ty
 pe jpg)
@@ -806,7 +809,7 @@ Package pdftex.def Info: images/req-func/uc__The_System__addResearchGroupUser.j
 pg used on input line 769.
 (pdftex.def)             Requested size: 390.0pt x 264.00006pt.
 
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.18}
+[34pdfTeX warning (ext4): destination with the same identifier (name{figure.18}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -823,7 +826,7 @@ equirements Specification and Technology Neutral Process Design/FINAL/images/re
 q-func/uc__The_System__addUser.jpg> <C:/Users/User/Documents/GitHub/COS-301-Tea
 m-Fox-Assignment-1/Software Requirements Specification and Technology Neutral P
 rocess Design/FINAL/images/req-func/uc__The_System__removeUser.jpg>]
-<images/req-func/uc__The_System__removeResearchGroupUser.jpg, id=338, 944.52875
+<images/req-func/uc__The_System__removeResearchGroupUser.jpg, id=367, 944.52875
 pt x 572.1375pt>
 File: images/req-func/uc__The_System__removeResearchGroupUser.jpg Graphic file 
 (type jpg)
@@ -833,7 +836,7 @@ Package pdftex.def Info: images/req-func/uc__The_System__removeResearchGroupUse
 r.jpg used on input line 775.
 (pdftex.def)             Requested size: 390.0pt x 236.2366pt.
 
-<images/req-func/uc__The_System__viewResearchGroupProgress.jpg, id=339, 1015.79
+<images/req-func/uc__The_System__viewResearchGroupProgress.jpg, id=368, 1015.79
 5pt x 587.19376pt>
 File: images/req-func/uc__The_System__viewResearchGroupProgress.jpg Graphic fil
 e (type jpg)
@@ -842,7 +845,7 @@ e (type jpg)
 Package pdftex.def Info: images/req-func/uc__The_System__viewResearchGroupProgr
 ess.jpg used on input line 781.
 (pdftex.def)             Requested size: 390.0pt x 225.43863pt.
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.20
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.20
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -860,7 +863,7 @@ q-func/uc__The_System__addResearchGroupUser.jpg> <C:/Users/User/Documents/GitHu
 b/COS-301-Team-Fox-Assignment-1/Software Requirements Specification and Technol
 ogy Neutral Process Design/FINAL/images/req-func/uc__The_System__removeResearch
 GroupUser.jpg>]
-<images/req-func/uc__The_System__viewResearchGroupUsers.jpg, id=346, 1113.15875
+<images/req-func/uc__The_System__viewResearchGroupUsers.jpg, id=375, 1113.15875
 pt x 608.2725pt>
 File: images/req-func/uc__The_System__viewResearchGroupUsers.jpg Graphic file (
 type jpg)
@@ -870,7 +873,7 @@ Package pdftex.def Info: images/req-func/uc__The_System__viewResearchGroupUsers
 .jpg used on input line 787.
 (pdftex.def)             Requested size: 390.0pt x 213.11205pt.
 
-<images/req-func/uc__The_System__viewUnitsEarned.jpg, id=347, 726.715pt x 340.2
+<images/req-func/uc__The_System__viewUnitsEarned.jpg, id=376, 726.715pt x 340.2
 7126pt>
 File: images/req-func/uc__The_System__viewUnitsEarned.jpg Graphic file (type jp
 g)
@@ -878,7 +881,7 @@ g)
 Package pdftex.def Info: images/req-func/uc__The_System__viewUnitsEarned.jpg us
 ed on input line 793.
 (pdftex.def)             Requested size: 390.0pt x 182.61185pt.
- [35pdfTeX warning (ext4): destination with the same identifier (name{figure.22
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.22
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -896,7 +899,7 @@ q-func/uc__The_System__viewResearchGroupProgress.jpg> <C:/Users/User/Documents/
 GitHub/COS-301-Team-Fox-Assignment-1/Software Requirements Specification and Te
 chnology Neutral Process Design/FINAL/images/req-func/uc__The_System__viewResea
 rchGroupUsers.jpg>]
-<images/req-func/uc__The_System__editProfile.jpg, id=354, 947.54pt x 388.45125p
+<images/req-func/uc__The_System__editProfile.jpg, id=384, 947.54pt x 388.45125p
 t>
 File: images/req-func/uc__The_System__editProfile.jpg Graphic file (type jpg)
  <use images/req-func/uc__The_System__editProfile.jpg>
@@ -904,14 +907,14 @@ Package pdftex.def Info: images/req-func/uc__The_System__editProfile.jpg used o
 n input line 799.
 (pdftex.def)             Requested size: 390.0pt x 159.88248pt.
 
-<images/req-func/uc__The_System__viewProfile.jpg, id=355, 783.92876pt x 360.346
+<images/req-func/uc__The_System__viewProfile.jpg, id=385, 783.92876pt x 360.346
 25pt>
 File: images/req-func/uc__The_System__viewProfile.jpg Graphic file (type jpg)
  <use images/req-func/uc__The_System__viewProfile.jpg>
 Package pdftex.def Info: images/req-func/uc__The_System__viewProfile.jpg used o
 n input line 805.
 (pdftex.def)             Requested size: 390.0pt x 179.27094pt.
- [36pdfTeX warning (ext4): destination with the same identifier (name{figure.24
+ [37pdfTeX warning (ext4): destination with the same identifier (name{figure.24
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -928,7 +931,7 @@ equirements Specification and Technology Neutral Process Design/FINAL/images/re
 q-func/uc__The_System__viewUnitsEarned.jpg> <C:/Users/User/Documents/GitHub/COS
 -301-Team-Fox-Assignment-1/Software Requirements Specification and Technology N
 eutral Process Design/FINAL/images/req-func/uc__The_System__editProfile.jpg>]
-<images/req-func/uc__The_System__viewAllUsers.jpg, id=363, 1327.96124pt x 594.2
+<images/req-func/uc__The_System__viewAllUsers.jpg, id=392, 1327.96124pt x 594.2
 2pt>
 File: images/req-func/uc__The_System__viewAllUsers.jpg Graphic file (type jpg)
  <use images/req-func/uc__The_System__viewAllUsers.jpg>
@@ -936,14 +939,14 @@ Package pdftex.def Info: images/req-func/uc__The_System__viewAllUsers.jpg used
 on input line 811.
 (pdftex.def)             Requested size: 390.0pt x 174.51361pt.
 
-<images/req-func/uc__The_System__logIn.jpg, id=364, 570.13pt x 276.03125pt>
+<images/req-func/uc__The_System__logIn.jpg, id=393, 570.13pt x 276.03125pt>
 File: images/req-func/uc__The_System__logIn.jpg Graphic file (type jpg)
 
 <use images/req-func/uc__The_System__logIn.jpg>
 Package pdftex.def Info: images/req-func/uc__The_System__logIn.jpg used on inpu
 t line 817.
 (pdftex.def)             Requested size: 390.0pt x 188.81912pt.
- [37pdfTeX warning (ext4): destination with the same identifier (name{figure.26
+ [38pdfTeX warning (ext4): destination with the same identifier (name{figure.26
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -960,14 +963,14 @@ equirements Specification and Technology Neutral Process Design/FINAL/images/re
 q-func/uc__The_System__viewProfile.jpg> <C:/Users/User/Documents/GitHub/COS-301
 -Team-Fox-Assignment-1/Software Requirements Specification and Technology Neutr
 al Process Design/FINAL/images/req-func/uc__The_System__viewAllUsers.jpg>]
-<images/req-func/uc__The_System__logOut.jpg, id=371, 613.29124pt x 302.12875pt>
+<images/req-func/uc__The_System__logOut.jpg, id=400, 613.29124pt x 302.12875pt>
 File: images/req-func/uc__The_System__logOut.jpg Graphic file (type jpg)
 <use images/req-func/uc__The_System__logOut.jpg>
 Package pdftex.def Info: images/req-func/uc__The_System__logOut.jpg used on inp
 ut line 823.
 (pdftex.def)             Requested size: 390.0pt x 192.12622pt.
 
-<images/req-func/uc__The_System__viewActivityLogs.jpg, id=372, 1121.18875pt x 6
+<images/req-func/uc__The_System__viewActivityLogs.jpg, id=401, 1121.18875pt x 6
 29.35126pt>
 File: images/req-func/uc__The_System__viewActivityLogs.jpg Graphic file (type j
 pg)
@@ -975,7 +978,7 @@ pg)
 Package pdftex.def Info: images/req-func/uc__The_System__viewActivityLogs.jpg u
 sed on input line 829.
 (pdftex.def)             Requested size: 390.0pt x 218.9222pt.
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.28
+ [39pdfTeX warning (ext4): destination with the same identifier (name{figure.28
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -992,7 +995,7 @@ equirements Specification and Technology Neutral Process Design/FINAL/images/re
 q-func/uc__The_System__logIn.jpg> <C:/Users/User/Documents/GitHub/COS-301-Team-
 Fox-Assignment-1/Software Requirements Specification and Technology Neutral Pro
 cess Design/FINAL/images/req-func/uc__The_System__logOut.jpg>]
-<images/req-func/uc__The_System__backupSystemInfo.jpg, id=379, 963.6pt x 566.11
+<images/req-func/uc__The_System__backupSystemInfo.jpg, id=408, 963.6pt x 566.11
 5pt>
 File: images/req-func/uc__The_System__backupSystemInfo.jpg Graphic file (type j
 pg)
@@ -1000,7 +1003,7 @@ pg)
 Package pdftex.def Info: images/req-func/uc__The_System__backupSystemInfo.jpg u
 sed on input line 835.
 (pdftex.def)             Requested size: 390.0pt x 229.11983pt.
- [39pdfTeX warning (ext4): destination with the same identifier (name{figure.30
+ [40pdfTeX warning (ext4): destination with the same identifier (name{figure.30
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1018,7 +1021,7 @@ mages/req-func/uc__The_System__viewActivityLogs.jpg> <C:/Users/User/Documents/G
 itHub/COS-301-Team-Fox-Assignment-1/Software Requirements Specification and Tec
 hnology Neutral Process Design/FINAL/images/req-func/uc__The_System__backupSyst
 emInfo.jpg>]
-<images/process-spec/Activity_Login.jpg, id=386, 792.9625pt x 853.1875pt>
+<images/process-spec/Activity_Login.jpg, id=415, 792.9625pt x 853.1875pt>
 File: images/process-spec/Activity_Login.jpg Graphic file (type jpg)
 
 <use images/process-spec/Activity_Login.jpg>
@@ -1026,14 +1029,14 @@ Package pdftex.def Info: images/process-spec/Activity_Login.jpg used on input l
 ine 849.
 (pdftex.def)             Requested size: 390.0pt x 419.62776pt.
 
-<images/process-spec/Activity_AddPaper.jpg, id=387, 451.6875pt x 732.7375pt>
+<images/process-spec/Activity_AddPaper.jpg, id=416, 451.6875pt x 732.7375pt>
 File: images/process-spec/Activity_AddPaper.jpg Graphic file (type jpg)
 
 <use images/process-spec/Activity_AddPaper.jpg>
 Package pdftex.def Info: images/process-spec/Activity_AddPaper.jpg used on inpu
 t line 855.
 (pdftex.def)             Requested size: 390.0pt x 632.70235pt.
- [40pdfTeX warning (ext4): destination with the same identifier (name{figure.32
+ [41pdfTeX warning (ext4): destination with the same identifier (name{figure.32
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1045,7 +1048,7 @@ ocess-spec/Activity_Login.jpg>]
 Overfull \vbox (62.36897pt too high) has occurred while \output is active []
 
 
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.33}
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.33}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1054,7 +1057,7 @@ l.857
        <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment-1/Software R
 equirements Specification and Technology Neutral Process Design/FINAL/images/pr
 ocess-spec/Activity_AddPaper.jpg>]
-<images/process-spec/Activity_EditPaper.jpg, id=398, 461.725pt x 722.7pt>
+<images/process-spec/Activity_EditPaper.jpg, id=428, 461.725pt x 722.7pt>
 File: images/process-spec/Activity_EditPaper.jpg Graphic file (type jpg)
 
 <use images/process-spec/Activity_EditPaper.jpg>
@@ -1065,7 +1068,7 @@ ut line 861.
 Overfull \vbox (40.1049pt too high) has occurred while \output is active []
 
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.34}
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.34}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1074,7 +1077,7 @@ l.863
        <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment-1/Software R
 equirements Specification and Technology Neutral Process Design/FINAL/images/pr
 ocess-spec/Activity_EditPaper.jpg>]
-<images/process-spec/generateReportActivityDiagram.jpg, id=405, 893.3375pt x 11
+<images/process-spec/generateReportActivityDiagram.jpg, id=434, 893.3375pt x 11
 25.20375pt>
 File: images/process-spec/generateReportActivityDiagram.jpg Graphic file (type 
 jpg)
@@ -1083,14 +1086,14 @@ Package pdftex.def Info: images/process-spec/generateReportActivityDiagram.jpg
 used on input line 867.
 (pdftex.def)             Requested size: 390.0pt x 491.22812pt.
 
-<images/process-spec/logOutActivityDiagraml.jpg, id=406, 1152.305pt x 543.02875
+<images/process-spec/logOutActivityDiagraml.jpg, id=435, 1152.305pt x 543.02875
 pt>
 File: images/process-spec/logOutActivityDiagraml.jpg Graphic file (type jpg)
  <use images/process-spec/logOutActivityDiagraml.jpg>
 Package pdftex.def Info: images/process-spec/logOutActivityDiagraml.jpg used on
  input line 873.
 (pdftex.def)             Requested size: 390.0pt x 183.79044pt.
- [43pdfTeX warning (ext4): destination with the same identifier (name{figure.35
+ [44pdfTeX warning (ext4): destination with the same identifier (name{figure.35
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1098,7 +1101,7 @@ Package pdftex.def Info: images/process-spec/logOutActivityDiagraml.jpg used on
 l.875 
        <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment-1/Software R
 equirements Specification and Technology Neutral Process Design/FINAL/images/pr
-ocess-spec/generateReportActivityDiagram.jpg>] [44pdfTeX warning (ext4): destin
+ocess-spec/generateReportActivityDiagram.jpg>] [45pdfTeX warning (ext4): destin
 ation with the same identifier (name{figure.36}) has been already used, duplica
 te ignored
 
@@ -1108,13 +1111,13 @@ l.879 \newpage
                <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment-1/So
 ftware Requirements Specification and Technology Neutral Process Design/FINAL/i
 mages/process-spec/logOutActivityDiagraml.jpg>]
-<images/domainModel.jpg, id=417, 1008.76875pt x 839.135pt>
+<images/domainModel.jpg, id=446, 1008.76875pt x 839.135pt>
 File: images/domainModel.jpg Graphic file (type jpg)
 
 <use images/domainModel.jpg>
 Package pdftex.def Info: images/domainModel.jpg used on input line 887.
 (pdftex.def)             Requested size: 390.0pt x 324.41881pt.
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.37
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.37
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1123,44 +1126,69 @@ l.918 	\item H
               TML:  The system will be mainly web based, and will need to be...
  <C:/Users/User/Documents/GitHub/COS-301-Team-Fox-Assignment-1/Software Require
 ments Specification and Technology Neutral Process Design/FINAL/images/domainMo
-del.jpg>] [46]
+del.jpg>]
+Overfull \hbox (3.5695pt too wide) in paragraph at lines 927--928
+[]\OT1/cmr/m/n/12 PHP: Com-monly in-stalled en-vi-ron-ment,embedding in HTML, l
+arge
+ []
 
-! LaTeX Error: \begin{itemize} on input line 924 ended by \end{document}.
+[47]
+
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.957 \end{document}
-                    
+l.941 \newline
+              
 ? 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 957.
-[47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 957.
+[48] [49]
+
+! LaTeX Error: \begin{itemize} on input line 915 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1000 \end{document}
+                     
+? 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1000.
+[50]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1000.
 
 ("C:\Users\User\Documents\GitHub\COS-301-Team-Fox-Assignment-1\Software Require
 ments Specification and Technology Neutral Process Design\FINAL\Software.Requir
 ements.Specification.and.Technology.Neutral.Process.Design.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 957.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 957.
-Package rerunfilecheck Info: File `Software.Requirements.Specification.and.Tech
-nology.Neutral.Process.Design.out' has not changed.
-(rerunfilecheck)             Checksum: 773E0F8358B8D62889B371E63742271F;1897.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 957.
- )
-(\end occurred inside a group at level 2)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1000.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1000.
 
-### semi simple group (level 2) entered at line 924 (\begingroup)
+
+
+Package rerunfilecheck Warning: File `Software.Requirements.Specification.and.T
+echnology.Neutral.Process.Design.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Software.Requirements.Specification
+.and.Technology.Neutral.Process.Design.out':
+(rerunfilecheck)             Before: 39DC7DFFCDF1F171BDD85D3D86A6B01B;2206
+(rerunfilecheck)             After:  30CAC29C0BB2DB6DE2C79367129D60D4;2241.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1000.
+ )
+(\end occurred inside a group at level 1)
+
 ### semi simple group (level 1) entered at line 915 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5281 strings out of 493921
- 85459 string characters out of 3144879
- 153725 words of memory out of 3000000
- 8387 multiletter control sequences out of 15000+200000
+ 5293 strings out of 493921
+ 85618 string characters out of 3144879
+ 154725 words of memory out of 3000000
+ 8391 multiletter control sequences out of 15000+200000
  10567 words of font info for 37 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,5n,28p,905b,481s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,5n,28p,905b,471s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
@@ -1169,9 +1197,9 @@ y10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb>
 Output written on Software.Requirements.Specification.and.Technology.Neutral.Pr
-ocess.Design.pdf (48 pages, 3649596 bytes).
+ocess.Design.pdf (51 pages, 3657175 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
- 119 named destinations out of 1000 (max. 500000)
- 410 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 520 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 450 words of extra memory for PDF output out of 10000 (max. 10000000)
 
