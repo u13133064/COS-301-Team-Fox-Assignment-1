@@ -991,6 +991,8 @@ Human users will have access to the platform though two separate channels. Namel
 \item \textbf{Author:} Authors have no access to this system. Authors are simply data entries in the database which have been stored to simplify data entry in cases where an author needs to be assigned to several papers.
 \end{itemize}
 \item \textbf{System Users:}
+The system will be sharing information to the two main portals - being web and Android. In order to accomplish this we will be implementing an API (Application Program Interface) which will act as a layer of abstraction. It will provide access to requested information (users, papers, venues, searches, etc.) and carry out tasks on behalf of the portal (be it web or Android). By doing this we will be advancing flexibility of the system, since the same API calls will be used regardless of the platform used to make them. The API will function by receiving a call, delegating the call to the server and then forwarding the response to the client (who made the initial request).
+
 \end{itemize}
 %----------------------------------------------------------------------------------------
 % To be done by: Jedd
