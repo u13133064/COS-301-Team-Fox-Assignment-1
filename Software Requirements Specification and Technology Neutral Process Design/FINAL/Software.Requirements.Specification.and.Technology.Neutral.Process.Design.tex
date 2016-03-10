@@ -15,7 +15,7 @@
 \center % Center everything on the page
  
 %----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
+%-	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
 
 \textsc{\LARGE University of Pretoria}\\[1.5cm]
@@ -23,7 +23,7 @@
 \textsc{\large Team Fox}\\[0.5cm]
 
 %----------------------------------------------------------------------------------------
-%	TITLE SECTION
+%-	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
 \HRule \\[0.4cm]
@@ -31,7 +31,7 @@
 \HRule \\[1.5cm]
  
 %----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
+%-	AUTHOR SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}{0.4\textwidth}
@@ -64,7 +64,7 @@ Kudzai \textsc{Muranga}
 
 
 %----------------------------------------------------------------------------------------
-%	DATE SECTION
+%-	DATE SECTION
 %----------------------------------------------------------------------------------------
 
 {\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
@@ -977,7 +977,27 @@ In this section, the data structure requirements of the system are specified in 
 % To be done by: Jason and Sandile
 %----------------------------------------------------------------------------------------
 \section{Use of Reference Architectures and Frameworks}
+The reason we are using reference architectures in this system is due to the fact that it helps with the development process of the system. What this section is meant to include is how the system should use frameworks to implement the architectural patten(s) chosen and what the reasons for using these frameworks are. \\
 
+\noindent
+We have chosen to use and refer to the Web 2.0 reference architecture due to the fact that this is primarily a web-based system. The Web 2.0 Reference Architecture can be found here: \url{http://archive.oreilly.com/pub/a/web2/excerpts/web2-architectures/chapter-5.html}.\\
+
+\noindent
+This Reference Architecture has 4 main tiers that are essential to our system, namely:
+\begin{enumerate}
+	\item Resource Tier
+	\item Service Tier
+	\item Client Tier and
+	\item Design, Development and governance tools
+\end{enumerate}
+
+\subsubsection{Resource Tier}
+The Resource tier includes `backend systems that can support services that will be consumed over the internet'. Thus our system will need to use this tier to ``consume" information which is input by the user for either: signing up, logging in adding a paper, changing the state of a paper, removing a user, adding a user etc. All this information will be updated in the database (also considered to be the model of the MVC pattern) which will store all the data of the user's and metadata of the paper's. This tier directly links with the Service tier due to the fact that for validation and storage of the input it needs to be sent to the server side and validated and stored from there. 
+
+% Service Tier and Client Tier done by Sandile.
+
+\subsubsection{Design, Development and Governance Tools}
+This tier refers to the tools that are used to actually build the web application. The reference architecture refers specifically to IDE's however I disagree with that in that one does not necessarily need an IDE to built a web application. This does not necessarily fit into this reference architecture directly. It is more just used to describe a tool for the developer to use and does not use the other tiers directly.\\
 %----------------------------------------------------------------------------------------
 % To be done by: Josef & GP
 %----------------------------------------------------------------------------------------
@@ -1011,7 +1031,7 @@ In this section, the data structure requirements of the system are specified in 
 	\begin{itemize}
 	\item Will this new user receive units for the paper if it has already been published?
 	\end{itemize}
-\item If a paper has been "terminated" should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
+\item If a paper has been ``terminated`` should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
 \end{itemize}
 
 
