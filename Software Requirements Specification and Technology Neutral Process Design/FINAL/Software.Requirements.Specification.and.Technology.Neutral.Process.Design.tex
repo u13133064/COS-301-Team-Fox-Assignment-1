@@ -1033,9 +1033,10 @@ Since the integration of jQuery Mobile and Backbone is common they decided to cr
 %----------------------------------------------------------------------------------------
 \subsection{Access and Integration Channels}
 In this section we mention and discuss the main access and integration channels of this system. Among them are different human users, each acting in different roles, and system users - such as remote clients or the database software.
+\subsubsection{Access Channels}
 \begin{itemize}
 \item \textbf{Human Users:}
-Human users will have access to the platform though two separate channels. Namely, through a website interface and a native Android application. 
+Human users will have access to the platform through two separate channels. Namely, through a website interface and a native Android application. 
 \begin{itemize}
 \item \textbf{Administrator:} Two administrator users will have access to the system. Firstly the Head of Department will have an administrator account through which he will have access to all features, and all data, in the system. He will, therefore, be able to access and update information on papers without having to be an author on the paper. He will also have access to the database on which all system data (including users, papers and venues) is stored. This will require that such access is available on both the web interface and the Android app. Additionally there will be another administrator account through which a technician must access the system in order to conduct routine maintenance and fix possible errors.
 \item \textbf{User:} User accounts will be allowed to add papers to the system as well as edit papers which they are already assigned to (either as Authors or not). Users do not have administrative access to any data (apart from Authors and Venues) which they have not been assigned to. For instance, a User may not view or edit a paper which they have not been assigned to by another User, already assigned to said paper.
@@ -1053,18 +1054,21 @@ Here we discuss some of the main protocols we plan to use in implementing this s
 TCP/IP will be used to establish connections between computers such as the server and the clients. TCP allows us to open a data stream to which we can read and write. This allows us to transfer data over networks, including the Internet. We chose TCP over alternatives such as UDP due to its inherent reliability.
 
 \item \textbf{HTTP (HyperText Transfer Protocol):}
-HTTP will be used to initiate transfers between components of the system. GET and POST request will be used to transfer data to and from the server, database and the numerous client interfaces. Additionally, HTTP provides us with built-in error codes which will allow the system to track the success or failure of a request and react accordingly (retrying or requesting new input data from user).
+HTTP will be used to initiate transfers between components of the system. GET and POST requests will be used to transfer data to and from the server, database and the numerous client interfaces. Additionally, HTTP provides us with built-in error codes which will allow the system to track the success or failure of a request and react accordingly (retrying or requesting new input data from user).
 
 \item \textbf{SMTP (Simple Mail Transfer Protocols):}
 SMTP will be used to send emails to users, notifying them of oncoming deadlines for paper submission. SMTP provides a stable method to transfer email by letting us transfer the email to a SMTP server and then queueing the mail until the next server - either an intermediate SMTP or POP3/IMAP server - becomes available. By using SMTP we will minimize the chance of mail getting lost and a user not being notified.
 
 \item \textbf{FTP (File Transfer Protocol):}
 FTP will be used to transfer files (such as HTML, CSS or PHP files) to and from the server. It will specifically be used in transferring files to the webserver from remote locations.
-
-
+\end{itemize}
 \end{itemize}
 
-\end{itemize}
+\subsubsection{Integration Channels}
+The system will integrate with an external database system (which has been chosen as MongoDB in this case) in order to store all relevant publication and user information.
+
+In addition, the API will communicate with the client and server using AngularJS, as described in the Frameworks section.
+
 %----------------------------------------------------------------------------------------
 % To be done by: Jedd
 %----------------------------------------------------------------------------------------
