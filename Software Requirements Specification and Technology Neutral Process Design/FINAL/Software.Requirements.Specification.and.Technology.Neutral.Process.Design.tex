@@ -86,8 +86,13 @@ Kudzai \textsc{Muranga}
 % - GP
 %----------------------------------------------------------------------------------------
 
+
 \tableofcontents
 
+
+%----------------------------------------------------------------------------------------
+%	Start Software Requirements Specifcation Section
+%----------------------------------------------------------------------------------------
 \newpage
 
 %----------------------------------------------------------------------------------------
@@ -169,144 +174,6 @@ In addition, the system will be used by the Computer Science department at the U
  	
 Furthermore, the project might serve as an example to other students on how to implement such a system or it can be used as a basic structure and starting point for other institutes.
 
-\newpage
-\section{Architecture Requirements}
-
-The software architecture requirements include the access and integration requirements, quality
-requirements and architectural constraints.
-
-%----------------------------------------------------------------------------------------
-% To be done by: Kudzai
-%----------------------------------------------------------------------------------------
-\subsection{Architectural Scope}
-
-%----------------------------------------------------------------------------------------
-% Done by: Hlengekile Jita (edited by Gian Paolo Buffo)
-% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
-%----------------------------------------------------------------------------------------
-\subsection{Access Channel Requirements}
-
-When considering the access channels of a target system, there are two main possibilities to consider: the human users of the system and whether any other systems need to be able to access the system. For both of these possibilities one then needs to consider through which ways they will access the system, what functionality the system requires these access channels to have and how these access channels will provide said functionality. 
-
-The system required by our client (which will from herewith be referred to as the system or the target system) is a system through which researchers can keep track of their publications. The users of the system, the researchers, need a channel through which they can use the system. The client does not require any other systems to be able to access our system or use the functionality of our system for a higher processing scheme, at this stage.
-
-The client would like the creation of two platforms through which the users of the system can access the system, namely:
-\begin{itemize}
-	\item A Web Interface
-	\item A Mobile Application (On the Android platform)
-\end{itemize}
-
-Both of these will have to access our system through the Internet - for the Android Application, this will require requesting permissions. The aforementioned platforms will need an interface through which to access our system, known as an Application Programming Interface (API). This interface will have to enable the passing of data from the system to the channel through which the user accesses the system. Considering the general functionality our system provides, and that communication would take place through the Internet, this API would have to be RESTful.
-
-REST stands for Representational State Transfer, and it is a software architectural style that deals with resources and what resources are accessed through using the HTTP user-oriented network protocol. This RESTful API would enable the transfer of data between our system and the platforms our client has chosen for users to access the system through - in our case over a network, namely the Internet.
-
-Before we consider this API further and what data it shall pass and how our access channels will use the API, let us revisit the functionality the access platforms will need to have to provide the users with the target system's maximum functionality.
-\begin{itemize}
-	\item User log in
-	\item Search functionality
-	\item Ability to open excel spreadsheets
-	\item Viewing of plain text
-	\item Viewing of lists, tables etc.
-	\item Viewing of links
-	\item Ability to view information
-	\item Ability to add information
-	\item Ability to change information
-	\item Ability to remove information
-\end{itemize}
-
-For the viewing of text, lists, links and the like, this will have to do with the Graphical User Interface (GUI) that the access channel provides. In the case of the Web Interface this can be designed using HTML and its associated counterparts such as CSS, Bootstrap and more. In the case of the Android Application, a number of classes and functions will be used. For example in the case of a list, one would use a ListView item on their user interface and this can be created using the android.widget.ListView class, and operations on said list will be done using the classes' associated functions.
-
-The Search functionality would also need to be provided by the Graphical User Interface, but actual searching of the database used in our system will be done by the system itself, so our API would need to be able to request the system to do the search, when a user provides the required information for the search by interacting with the GUI.
-
-For the ability to open Excel spreadsheets, in the Web Interface, this would imply the ability to download a file; while on an Android Application, this would imply the same thing as well as the improved ability to open the user devices' spreadsheet viewer.
-
-As for the user log in functionality, users would provide user details through the GUI and the API would then need to pass user details for verification to the system and be able to receive a response about whether or not log in was successful or not. Another option that would be safer is the use of API authentication, this is a token based authentication in which the user would log in and if successful the system will respond with a unique token that can be used in future requests.
-
-As we already know the information that will be displayed on these platforms GUIs will be provided through the RESTful API from our system. For this information, the API would need to get information from the system and be able to send changes including the addition and removal of information back to the system. Basically all the interaction between the system and these platforms will be done by the API with the following HTTP methods:
-\begin{itemize}
-	\item GET – For reading information from the system
-	\item PUT – For adding information to the system
-	\item DELETE – For removing information from the system
-	\item POST – For making changes/edits to information on the system
-	\item OPTIONS – For getting operations that can be performed by the system
-\end{itemize}
-
-While these platforms vary, they will both access the system through this API and use the Internet to communicate with the system. However the ways they call the API, process and deal with the responses will vary slightly on the two platforms. The API would provide a standard way for accessing the system despite what channel may be in use. These access channels thus simply need to provide users with the functionality that the target system requires on a GUI and use the API for providing users with the results and information from the system.
-\\\\
-\textbf{References}
-\begin{itemize}
-\item \url{http://www.andrewhavens.com/posts/20/beginners-guide-to-creating-a-rest-api/}
-\item \url{http://www.tutorialspoint.com/restful/restful_introduction.htm}
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-% Done by: Josef Alberts (edited by Gian Paolo Buffo)
-% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
-%----------------------------------------------------------------------------------------
-\newpage
-\subsection{Quality Requirements}
-
-\subsubsection{Performance}
-The system must work as efficiently as possible and not lag in delivering information to the user. Since this system will not be sending large amounts of data, it should not be difficult for the system to transfer the data speedily. In this implementation, we expect the network speed to dictate performance – not the system itself. Regardless, the system must be able to handle the full amount of users (approx. 100) concurrently without experiencing significant delays or errors. The success of this requirement can be measured in the time taken for a task to be completed under normal, and heavy-load scenarios
-
-\subsubsection{Reliability}
-It is imperative that the system not experience unnecessary downtime (period of in-operation of the system), thus preventing users from checking on or altering information on the system. An optimal uptime (period of normal operation of the system) within a month would be 99\% and upwards. Additionally there should not be frequent errors within normal operating parameters of the system. This means that simple logins (sessions), alterations or additions to the database should not cause errors which affect the system as a whole. Additionally, minor human errors, such as omission of information, should not be allowed to propagate through the system. But the system should rather allow the user to fix the error immediately – which will also contribute towards the accuracy of information in the database.
-
-\subsubsection{Scalability}
-The system will initially be implemented to manage papers pertaining to one faculty, but it might be necessary in the future to expand it to manage more faculties. The maximum amount for one implementation to manage should not exceed 11, and as such it should be scalable to that amount of faculties and the users associated with them. We make the assumption that the total users per faculty does not exceed 100 and, thus, the total on the system will never exceed 1100.
-
-\subsubsection{Usability} 
-Users must be able to login, edit information and logout without hassle. The interface should not be cluttered and should not contain redundant information. As management of information on the system is critical, accessing said information should be as simple as possible.
-
-\subsubsection{Auditability}
-In order to track changes and/or errors on the system, all actions by users must be logged as they occur. This includes, but is not limited to, log-in attempts, editing of information (whether successful or not) and log-outs. All errors should also be logged in order to simplify error-tracking. The logging system must not interfere with the users' actions and must not significantly affect performance. Logs must be timestamped and must contain information on which user executed an action – or where an error occurred.
-
-\subsubsection{Security}
-The system will be protected by a login system which will require a user to enter an ID and a password. The ID and password will then be compared to users in the system's database and, if an appropriate user is found AND the passwords (entered and stored) match, may the user proceed to access the system. This system must not, under any circumstances, allow unauthorised users to enter the system. If a user enters incorrect information, the system must notify the user and request that they correct the input before allowing them to continue to the rest of the system.
-
-%----------------------------------------------------------------------------------------
-% Done by: Jedd Schneier (edited by Gian Paolo Buffo)
-% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
-%----------------------------------------------------------------------------------------
-\newpage
-\subsection{Integration Requirements}
-
-As the system will be accessed remotely through the Internet, it needs to integrate with web services. The GUI will be integrated online with HTML, JavaScript, CSS and any frameworks or libraries the developer decides to use as long as the system itself remains compatible on all browsers and does not use browser-exclusive functionality. The system must be integrated with the server, and thus make use of appropriate server-side technology such s AJAX and PHP. In summary, the system needs to be accessed anywhere on any browser through any device regardless of screen resolution, computer Operating System or hardware specification. Additionally, the system must work with these technologies in a robust and consistent manner. 
-
-For mobile development, the system is required to integrate with the Android mobile Operating System. It must work correctly on all previous versions, and thus have no dependency on current feature sets. It must also be scalable to future Android releases and switching from account access through Android to web access and vice versa must be seamless and secure. On that note, the system must integrate well with security measures.
-
-Externally, the system must be integrated with a database system such as LDAP, mongoDB or an appropriate alternative the developer decides on, provided that the system integrates with the database securely and it remains scalable. The system is also required to send emails to users, and thus it must have email integration either through external email servers or technologies, or an internally created one. Any libraries or packages needed to realise the functional requirements must be integrated with the other technologies being used. It was decided that the system does not need to integrate with Google Calender and thus it will not be using the Google API.
-
-The system will generate reports in the form of spreadsheets and this must be integrated with the appropriate technology such as Microsoft Excel or LibreOffice Calc. The system will also regularly generate statistics and graphs so it is imperative the system integrates with statistical modelling technologies. As the system will be primarily an Internet-based application, the HTTP protocol suite will be primarily used for website data passing from client to server. The sending of emails should adhere to the SMTP suite and message passing through the system can be achieved through TCP. 
-
-All integration needs to be seamless and not interfere with system performance. Security is also a major concern, and thus technologies integrated must not threaten the system's security as a whole or other technologies. The system must remain portable to any Android device and to any browser. As the system may grow and shrink as users are added and deleted, the system must be scalable. The data stored in the system will also increase and thus storage integration must be scalable as well. The system must remain reliable with each integrated technology added, and any errors must be able to be traced to the technology causing it.
-
-%----------------------------------------------------------------------------------------
-% Done by: Jason Gordon
-% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
-%----------------------------------------------------------------------------------------
-\newpage
-\subsection{Architecture Constraints}
-
-There are not too many architectural constraints to this system. However some constraints do exist, such as:
-\begin{itemize}
-\item The only technological constraint we have been given is the fact that we cannot link the system to any external resources besides for sending an email reminder, to the user, about the due date for their paper.
-	\begin{itemize}
-	\item The only constraint with regard to this would be that we would not be able to ease the way in which the user could keep track of their due dates by \textit{e.g. Adding the date directly to their google calendar}. Thus the user would manually need to add the date to their calendar or create a reminder for themselves (if they want to). Another problem could be that the email reminder that is sent by the system could be cluttered between all the other emails that have been received, by the user, and thus the user may forget about the reminder that was sent by the system. 
-	\end{itemize}
-\item The role of the user in the system \textit{(i.e. Author, Research Leader, Administrator, Head of Department)} determines their permissions on the system.
-	\begin{itemize}
-	\item Author - May only edit metadata about a paper they are working on or have already published.
-	\item Research Leader - May see all papers in his or her research group.
-	\item Administrator/Head of Department - Should be able to view everything in the system (including all papers published, in progress or discontinued) as well as the number of units each user has earned. They may also add or remove users.
-	\end{itemize}
-\item The system must only cater for the Computer Science Department of the University of Pretoria. Users may not be anyone else outside the department. 
-\item When viewing profiles of other users, one may not see the papers of the other users - despite the progress of these papers - or the number of units they have earned in total. 
-\item However when viewing ones own profile, one may view their papers - regardless of progress - and also may view the number of units they have earned in total. 
-\item Developing the system for the web can be very different from developing it for Android. This does, however, depend on the language(s) used to develop the Android application. If it is coded using web based languages it would be easier to port it to android. However if it is developed using Java the web-based system would not be very portable to Android. 
-\item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
-\item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
-\end{itemize}
 
 \newpage
 \section{Functional requirements and application design}
@@ -888,6 +755,190 @@ In this section, the data structure requirements of the system are specified in 
 \end{figure}
 
 %----------------------------------------------------------------------------------------
+% Done by: Jacques van Wyk and Jason Gordon
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Open Issues}
+
+\begin{itemize}	
+\item Should the admin be able to edit the meta-data of the papers or not?
+	\begin{itemize}
+	\item Should the research leader be able to edit the meta-data of papers in their research group?
+	\end{itemize}
+\item What server will be used to host our site? 
+\item Should we add any backup capabilities for the database?
+	\begin{itemize}
+	\item If so, will the admin be the only one able to backup the database?
+	\end{itemize}
+\item Is there a specific database that we need to use to store the information (i.e. MySQL, MongoDB, Neo4j etc.)?
+\item Should the system be able to support more than 100 users if, for example, another employee was employed by the Computer Science Department? (i.e. should the addition of users past 100 be allowed?)
+\item Should any user be able to add papers on behalf of other users? There may be risks involved when allowing this.
+\item If a new user is added and they are already an author of a paper (when they were not a user of the system) should the papers, which the new user is part of, be displayed on their profile?
+	\begin{itemize}
+	\item Will this new user receive units for the paper if it has already been published?
+	\end{itemize}
+\item If a paper has been "terminated" should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	End Software Requirements Specification Section
+%----------------------------------------------------------------------------------------
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Software Architecture Documentation}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Start Software Architecture Section
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Architecture Requirements}
+
+The software architecture requirements include the access and integration requirements, quality
+requirements and architectural constraints.
+
+%----------------------------------------------------------------------------------------
+% To be done by: Kudzai
+%----------------------------------------------------------------------------------------
+\subsection{Architectural Scope}
+
+%----------------------------------------------------------------------------------------
+% Done by: Hlengekile Jita
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
+%----------------------------------------------------------------------------------------
+\subsection{Access Channel Requirements}
+
+When considering the access channels of a target system, there are two main possibilities to consider: the human users of the system and whether any other systems need to be able to access the system. For both of these possibilities one then needs to consider through which ways they will access the system, what functionality the system requires these access channels to have and how these access channels will provide said functionality. 
+
+The system required by our client (which will from herewith be referred to as the system or the target system) is a system through which researchers can keep track of their publications. The users of the system, the researchers, need a channel through which they can use the system. The client does not require any other systems to be able to access our system or use the functionality of our system for a higher processing scheme, at this stage.
+
+The client would like the creation of two platforms through which the users of the system can access the system, namely:
+\begin{itemize}
+	\item A Web Interface
+	\item A Mobile Application (On the Android platform)
+\end{itemize}
+
+Both of these will have to access our system through the Internet - for the Android Application, this will require requesting permissions. The aforementioned platforms will need an interface through which to access our system, known as an Application Programming Interface (API). This interface will have to enable the passing of data from the system to the channel through which the user accesses the system. Considering the general functionality our system provides, and that communication would take place through the Internet, this API would have to be RESTful.
+
+REST stands for Representational State Transfer, and it is a software architectural style that deals with resources and what resources are accessed through using the HTTP user-oriented network protocol. This RESTful API would enable the transfer of data between our system and the platforms our client has chosen for users to access the system through - in our case over a network, namely the Internet.
+
+Before we consider this API further and what data it shall pass and how our access channels will use the API, let us revisit the functionality the access platforms will need to have to provide the users with the target system's maximum functionality.
+\begin{itemize}
+	\item User log in
+	\item Search functionality
+	\item Ability to open excel spreadsheets
+	\item Viewing of plain text
+	\item Viewing of lists, tables etc.
+	\item Viewing of links
+	\item Ability to view information
+	\item Ability to add information
+	\item Ability to change information
+	\item Ability to remove information
+\end{itemize}
+
+For the viewing of text, lists, links and the like, this will have to do with the Graphical User Interface (GUI) that the access channel provides. In the case of the Web Interface this can be designed using HTML and its associated counterparts such as CSS, Bootstrap and more. In the case of the Android Application, a number of classes and functions will be used. For example in the case of a list, one would use a ListView item on their user interface and this can be created using the android.widget.ListView class, and operations on said list will be done using the classes' associated functions.
+
+The Search functionality would also need to be provided by the Graphical User Interface, but actual searching of the database used in our system will be done by the system itself, so our API would need to be able to request the system to do the search, when a user provides the required information for the search by interacting with the GUI.
+
+For the ability to open Excel spreadsheets, in the Web Interface, this would imply the ability to download a file; while on an Android Application, this would imply the same thing as well as the improved ability to open the user devices' spreadsheet viewer.
+
+As for the user log in functionality, users would provide user details through the GUI and the API would then need to pass user details for verification to the system and be able to receive a response about whether or not log in was successful or not. Another option that would be safer is the use of API authentication, this is a token based authentication in which the user would log in and if successful the system will respond with a unique token that can be used in future requests.
+
+As we already know the information that will be displayed on these platforms GUIs will be provided through the RESTful API from our system. For this information, the API would need to get information from the system and be able to send changes including the addition and removal of information back to the system. Basically all the interaction between the system and these platforms will be done by the API with the following HTTP methods:
+\begin{itemize}
+	\item GET – For reading information from the system
+	\item PUT – For adding information to the system
+	\item DELETE – For removing information from the system
+	\item POST – For making changes/edits to information on the system
+	\item OPTIONS – For getting operations that can be performed by the system
+\end{itemize}
+
+While these platforms vary, they will both access the system through this API and use the Internet to communicate with the system. However the ways they call the API, process and deal with the responses will vary slightly on the two platforms. The API would provide a standard way for accessing the system despite what channel may be in use. These access channels thus simply need to provide users with the functionality that the target system requires on a GUI and use the API for providing users with the results and information from the system.
+\\\\
+\textbf{References}
+\begin{itemize}
+\item \url{http://www.andrewhavens.com/posts/20/beginners-guide-to-creating-a-rest-api/}
+\item \url{http://www.tutorialspoint.com/restful/restful_introduction.htm}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% Done by: Josef Alberts (edited by Gian Paolo Buffo)
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
+%----------------------------------------------------------------------------------------
+\newpage
+\subsection{Quality Requirements}
+
+\subsubsection{Performance}
+The system must work as efficiently as possible and not lag in delivering information to the user. Since this system will not be sending large amounts of data, it should not be difficult for the system to transfer the data speedily. In this implementation, we expect the network speed to dictate performance – not the system itself. Regardless, the system must be able to handle the full amount of users (approx. 100) concurrently without experiencing significant delays or errors. The success of this requirement can be measured in the time taken for a task to be completed under normal, and heavy-load scenarios
+
+\subsubsection{Reliability}
+It is imperative that the system not experience unnecessary downtime (period of in-operation of the system), thus preventing users from checking on or altering information on the system. An optimal uptime (period of normal operation of the system) within a month would be 99\% and upwards. Additionally there should not be frequent errors within normal operating parameters of the system. This means that simple logins (sessions), alterations or additions to the database should not cause errors which affect the system as a whole. Additionally, minor human errors, such as omission of information, should not be allowed to propagate through the system. But the system should rather allow the user to fix the error immediately – which will also contribute towards the accuracy of information in the database.
+
+\subsubsection{Scalability}
+The system will initially be implemented to manage papers pertaining to one faculty, but it might be necessary in the future to expand it to manage more faculties. The maximum amount for one implementation to manage should not exceed 11, and as such it should be scalable to that amount of faculties and the users associated with them. We make the assumption that the total users per faculty does not exceed 100 and, thus, the total on the system will never exceed 1100.
+
+\subsubsection{Usability} 
+Users must be able to login, edit information and logout without hassle. The interface should not be cluttered and should not contain redundant information. As management of information on the system is critical, accessing said information should be as simple as possible.
+
+\subsubsection{Auditability}
+In order to track changes and/or errors on the system, all actions by users must be logged as they occur. This includes, but is not limited to, log-in attempts, editing of information (whether successful or not) and log-outs. All errors should also be logged in order to simplify error-tracking. The logging system must not interfere with the users' actions and must not significantly affect performance. Logs must be timestamped and must contain information on which user executed an action – or where an error occurred.
+
+\subsubsection{Security}
+The system will be protected by a login system which will require a user to enter an ID and a password. The ID and password will then be compared to users in the system's database and, if an appropriate user is found AND the passwords (entered and stored) match, may the user proceed to access the system. This system must not, under any circumstances, allow unauthorised users to enter the system. If a user enters incorrect information, the system must notify the user and request that they correct the input before allowing them to continue to the rest of the system.
+
+%----------------------------------------------------------------------------------------
+% Done by: Jedd Schneier (edited by Gian Paolo Buffo)
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
+%----------------------------------------------------------------------------------------
+\newpage
+\subsection{Integration Requirements}
+
+As the system will be accessed remotely through the Internet, it needs to integrate with web services. The GUI will be integrated online with HTML, JavaScript, CSS and any frameworks or libraries the developer decides to use as long as the system itself remains compatible on all browsers and does not use browser-exclusive functionality. The system must be integrated with the server, and thus make use of appropriate server-side technology such s AJAX and PHP. In summary, the system needs to be accessed anywhere on any browser through any device regardless of screen resolution, computer Operating System or hardware specification. Additionally, the system must work with these technologies in a robust and consistent manner. 
+
+For mobile development, the system is required to integrate with the Android mobile Operating System. It must work correctly on all previous versions, and thus have no dependency on current feature sets. It must also be scalable to future Android releases and switching from account access through Android to web access and vice versa must be seamless and secure. On that note, the system must integrate well with security measures.
+
+Externally, the system must be integrated with a database system such as LDAP, mongoDB or an appropriate alternative the developer decides on, provided that the system integrates with the database securely and it remains scalable. The system is also required to send emails to users, and thus it must have email integration either through external email servers or technologies, or an internally created one. Any libraries or packages needed to realise the functional requirements must be integrated with the other technologies being used. It was decided that the system does not need to integrate with Google Calender and thus it will not be using the Google API.
+
+The system will generate reports in the form of spreadsheets and this must be integrated with the appropriate technology such as Microsoft Excel or LibreOffice Calc. The system will also regularly generate statistics and graphs so it is imperative the system integrates with statistical modelling technologies. As the system will be primarily an Internet-based application, the HTTP protocol suite will be primarily used for website data passing from client to server. The sending of emails should adhere to the SMTP suite and message passing through the system can be achieved through TCP. 
+
+All integration needs to be seamless and not interfere with system performance. Security is also a major concern, and thus technologies integrated must not threaten the system's security as a whole or other technologies. The system must remain portable to any Android device and to any browser. As the system may grow and shrink as users are added and deleted, the system must be scalable. The data stored in the system will also increase and thus storage integration must be scalable as well. The system must remain reliable with each integrated technology added, and any errors must be able to be traced to the technology causing it.
+
+%----------------------------------------------------------------------------------------
+% Done by: Jason Gordon
+% TO BE EXTENDED ACCORDING TO NEW TEMPLATE
+%----------------------------------------------------------------------------------------
+\newpage
+\subsection{Architecture Constraints}
+
+There are not too many architectural constraints to this system. However some constraints do exist, such as:
+\begin{itemize}
+\item The only technological constraint we have been given is the fact that we cannot link the system to any external resources besides for sending an email reminder, to the user, about the due date for their paper.
+	\begin{itemize}
+	\item The only constraint with regard to this would be that we would not be able to ease the way in which the user could keep track of their due dates by \textit{e.g. Adding the date directly to their google calendar}. Thus the user would manually need to add the date to their calendar or create a reminder for themselves (if they want to). Another problem could be that the email reminder that is sent by the system could be cluttered between all the other emails that have been received, by the user, and thus the user may forget about the reminder that was sent by the system. 
+	\end{itemize}
+\item The role of the user in the system \textit{(i.e. Author, Research Leader, Administrator, Head of Department)} determines their permissions on the system.
+	\begin{itemize}
+	\item Author - May only edit metadata about a paper they are working on or have already published.
+	\item Research Leader - May see all papers in his or her research group.
+	\item Administrator/Head of Department - Should be able to view everything in the system (including all papers published, in progress or discontinued) as well as the number of units each user has earned. They may also add or remove users.
+	\end{itemize}
+\item The system must only cater for the Computer Science Department of the University of Pretoria. Users may not be anyone else outside the department. 
+\item When viewing profiles of other users, one may not see the papers of the other users - despite the progress of these papers - or the number of units they have earned in total. 
+\item However when viewing ones own profile, one may view their papers - regardless of progress - and also may view the number of units they have earned in total. 
+\item Developing the system for the web can be very different from developing it for Android. This does, however, depend on the language(s) used to develop the Android application. If it is coded using web based languages it would be easier to port it to android. However if it is developed using Java the web-based system would not be very portable to Android. 
+\item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
+\item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk
 %----------------------------------------------------------------------------------------
 \newpage
@@ -969,10 +1020,98 @@ In this section, the data structure requirements of the system are specified in 
 		\item[-] etc.
 	\end{itemize}
 %----------------------------------------------------------------------------------------
-% To be done by: Hlengekile
+% Done by: Hlengekile
 %----------------------------------------------------------------------------------------
 \section{Architectural Tactics or Strategies}
+For our system which is to be used by researchers to track their publications, a number of quality requirements were described earlier. These are:
+\begin{itemize}
+\item Performance
+\item Reliability
+\item Scalability
+\item Usability
+\item Auditability
+\item Security
+\end{itemize}
 
+In this section ways of achieving these quality requirements are discussed. This is done through architectural tactics and strategies. An architectural tactic is a design decision for realizing quality goals at the architectural level. Tactics influence the control of a quality attribute. On the other hand an architectural strategy is a collection of tactics.
+For each quality requirement, the goals that need to be achieved will firstly be described, followed by a diagram that demonstrates the relationship between the quality requirement and the strategies and tactics chosen to achieve the described goals. Thereafter the tactics and how they will be realized within our system are explained.
+
+
+\subsection{Performance}
+With performance the goals that need to be achieved were described as having speedy data transfer that can only be slowed down by the speed of the network, concurrency so the system can handle all hundred potential users at once and the system should be efficient and not lag in information delivery. 
+
+\begin{figure}[H]
+    \centering
+    \caption{Performance Tactics}
+    \includegraphics[width=1\textwidth]{arch-tactics/performance.png}
+\end{figure}
+
+In order to address performance, our strategies focus on the management of resources, management of the demand on resources as well as dealing with resource arbitration. Our strategies achieve this through concurrency and scheduling tactics, mainly but also by reducing and spreading the load. The major resource in our system will be the databases which stores information about users and publications, through the tactics described we will able to control the use of these resources as well as avoid conflicting accesses. This is crucial because this could firstly cause anomalies but more importantly slow down the system and give users a negative perception of the system if they have to wait to access resources. 
+
+
+\subsection{Reliability}
+In terms of reliability the goals that need to be achieved are an optimal time of ninety-nine percent and more up-time within a month as well as being able to ensure that system operations do not cause any system failures and errors in addition the system should avoid human errors.
+
+\begin{figure}[H]
+    \centering
+    \caption{Reliability Tactics}
+    \includegraphics[width=1\textwidth]{arch-tactics/reliability.png}
+\end{figure}
+
+In order to maintain reliability of the system, the strategies we apply are there to prevent system failures, and in the rare case that they do occur ensure they are detected and make appropriate preparations to recover and return to a working state of the system. In order to prevent faults in the system tactics such as error checking and process monitoring are applied, this way we can avoid human errors and ensure all operations are running smoothly. To detect faults we make use of logging and resource monitoring, this means making note of any changes or actions to the database and ensuring that it is always functional and that no potential faults exist in the databases. To recover from faults one should always backup the system when it is a working state, and use passive redundancy to inform system components when they need to make state updates. Thereafter once a fault occurs one can always rollback to the most recent working state.
+
+\subsection{Scalability}
+For scalability the goals that need to be achieved include the system being expandable to other faculties at the University, with there being a total of 11 faculties that means the system should thus be able to handle 1100 users concurrently without hassle and still meet the same performance standards as if there were only a 100 users. 
+
+\begin{figure}[H]
+    \centering
+    \caption{Scalability Tactics}
+    \includegraphics[width=1\textwidth]{arch-tactics/scalability.png}
+\end{figure}
+
+The strategies we use to address the scalability of our system to achieve the goal of it being expandable includes the management of resources, this is necessary so that the resources can be managed to deal with the greater demand once the system is expanded to more faculties. In addition the resources will need to be scaled up so that, it can be applied in the different contexts of various faculties hence tactics such as using abstract entities and the support of database field additions. 
+
+\subsection{Usability}
+Goals that need to be achieved for the usability quality requirement is that the user should be able to perform system operations without hassle, the user interface should not be cluttered and information access by user’s needs to be simple.
+
+\begin{figure}[H]
+    \centering
+    \caption{Usability Tactics}
+    \includegraphics[width=1\textwidth]{arch-tactics/usability.png}
+\end{figure}
+
+Our chosen usability tactics focus on making the system easier to use for user's. The strategy of having a user interface is important and includes tactics such as using Human Computer Interaction(HCI) techniques as well as having a graphical user interface to make the user feel at ease with the system. In addition information coherence as a tactic is important because it achieves the goal of information access and avoiding clutter and redundancy of information. Also another strategy is having the system able to interact with th user through run-time with tactics like user commands and giving the user feedback on their operations, this makes the sytem more usable because it gives the user a semblance of control and keeps them informed.
+
+\subsection{Auditability}
+For auditability, goals that need to be achieved is the tracking of all information associated with the system including errors, changes made, when such occurred and who performed what actions thus creating an audit trail for the system.
+
+\begin{figure}[H]
+    \centering
+    \caption{Auditability Tactics}
+    \includegraphics[width=1\textwidth]{arch-tactics/auditability.png}
+\end{figure}
+
+The strategy to deal with auditability is logging. We will make use of log files to implement tactics like tracking all actions/changes, track the users activity and  track errors as well making use of labels on logs that include time stamps, location of changes or errors as well as who made what changes and what caused errors. This all contributes to enabling system auditability because everything is tracked and stored separate from the system databases.
+
+\subsection{Security}
+With Security the goals that need to be achieved includes a log in system of which the user details will be verified and the prevention of unauthorized access.
+
+\begin{figure}[H]
+    \centering
+    \caption{Security Tactics}
+    \includegraphics[width=1\textwidth]{arch-tactics/security.png}
+\end{figure}
+
+The strategies for addressing the security quality requirement includes resisting attacks through tactics such as user authentication which addresses our goal of a log in system, and user authorization which ensures users have the rights to perform certain actions and data confidentiality which makes sure users only see the information they are allowed to see. Another strategy is the detection of attacks, this is done by requesting re-authentication if log in fails as well as the auditing of sensitive events such as making user removals and the like, and of course the logging of all actions so inconsistencies can be traced. The final strategy being recovery from attacks, this includes such as dropping a request or action once it is found to be unsafe or to be a threat and once an attack is found, restoring the system to it's state before an unsafe action was performed.
+\\
+\subsection{References}
+\begin{itemize}
+\item Bachmann, F. Bass, L. Klein, M. 2003. \textit{Deriving Architectural Tactics: A Step Toward Methodical Architectural Design.}  \url{http://www.sei.cmu.edu/reports/03tr004.pdf} [Accessed 8 March 2016]
+\item Kazman, R. Scott, J. 2009. \textit{Realizing and Refining Architectural Tactics: Availability.} [Online]. Available: \url{http://www.sei.cmu.edu/reports/09tr006.pdf} [Accessed 8 March 2016]
+\item Petre, L. 2011. \textit{Software Architectures, Lecture 2.} [Online]. Available: \url{http://www.users.abo.fi/lpetre/SA11/SALecture2.pdf} [Accessed 8 March 2016]
+\item Rehn, C. 2010. \textit{Software Architectural Tactics and Patterns for Safety and Security.} [Online]. Available: \url{http://www.christian-rehn.de/wp-content/uploads/downloads/2010/06/seminar_safe_sec.pdf} [Accessed 8 March 2016]
+\item Solms, F. 2016. \textit{Architectural Tactics.} [Online]. Available: \url{http://www.cs.up.ac.za/courses/COS301} [Accessed 10 March 2016]
+\end{itemize}
 %----------------------------------------------------------------------------------------
 % To be done by: Jason and Sandile
 %----------------------------------------------------------------------------------------
@@ -989,30 +1128,7 @@ In this section, the data structure requirements of the system are specified in 
 \section{Technologies}
 
 %----------------------------------------------------------------------------------------
-% Done by: Jacques van Wyk and Jason Gordon
+%	End Software Architecture Section
 %----------------------------------------------------------------------------------------
-\newpage
-\section{Open Issues}
-
-\begin{itemize}	
-\item Should the admin be able to edit the meta-data of the papers or not?
-	\begin{itemize}
-	\item Should the research leader be able to edit the meta-data of papers in their research group?
-	\end{itemize}
-\item What server will be used to host our site? 
-\item Should we add any backup capabilities for the database?
-	\begin{itemize}
-	\item If so, will the admin be the only one able to backup the database?
-	\end{itemize}
-\item Is there a specific database that we need to use to store the information (i.e. MySQL, MongoDB, Neo4j etc.)?
-\item Should the system be able to support more than 100 users if, for example, another employee was employed by the Computer Science Department? (i.e. should the addition of users past 100 be allowed?)
-\item Should any user be able to add papers on behalf of other users? There may be risks involved when allowing this.
-\item If a new user is added and they are already an author of a paper (when they were not a user of the system) should the papers, which the new user is part of, be displayed on their profile?
-	\begin{itemize}
-	\item Will this new user receive units for the paper if it has already been published?
-	\end{itemize}
-\item If a paper has been "terminated" should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
-\end{itemize}
-
 
 \end{document}
