@@ -1022,7 +1022,7 @@ There are not too many architectural constraints to this system. However some co
 %----------------------------------------------------------------------------------------
 % Done by: Hlengekile
 %----------------------------------------------------------------------------------------
-\section{Architectural Tactics or Strategies}
+\subsection{Architectural Tactics or Strategies}
 For our system which is to be used by researchers to track their publications, a number of quality requirements were described earlier. These are:
 \begin{itemize}
 \item Performance
@@ -1037,7 +1037,7 @@ In this section ways of achieving these quality requirements are discussed. This
 For each quality requirement, the goals that need to be achieved will firstly be described, followed by a diagram that demonstrates the relationship between the quality requirement and the strategies and tactics chosen to achieve the described goals. Thereafter the tactics and how they will be realized within our system are explained.
 
 
-\subsection{Performance}
+\subsubsection{Performance}
 With performance the goals that need to be achieved were described as having speedy data transfer that can only be slowed down by the speed of the network, concurrency so the system can handle all hundred potential users at once and the system should be efficient and not lag in information delivery. 
 
 \begin{figure}[H]
@@ -1049,7 +1049,7 @@ With performance the goals that need to be achieved were described as having spe
 In order to address performance, our strategies focus on the management of resources, management of the demand on resources as well as dealing with resource arbitration. Our strategies achieve this through concurrency and scheduling tactics, mainly but also by reducing and spreading the load. The major resource in our system will be the databases which stores information about users and publications, through the tactics described we will able to control the use of these resources as well as avoid conflicting accesses. This is crucial because this could firstly cause anomalies but more importantly slow down the system and give users a negative perception of the system if they have to wait to access resources. 
 
 
-\subsection{Reliability}
+\subsubsection{Reliability}
 In terms of reliability the goals that need to be achieved are an optimal time of ninety-nine percent and more up-time within a month as well as being able to ensure that system operations do not cause any system failures and errors in addition the system should avoid human errors.
 
 \begin{figure}[H]
@@ -1060,7 +1060,7 @@ In terms of reliability the goals that need to be achieved are an optimal time o
 
 In order to maintain reliability of the system, the strategies we apply are there to prevent system failures, and in the rare case that they do occur ensure they are detected and make appropriate preparations to recover and return to a working state of the system. In order to prevent faults in the system tactics such as error checking and process monitoring are applied, this way we can avoid human errors and ensure all operations are running smoothly. To detect faults we make use of logging and resource monitoring, this means making note of any changes or actions to the database and ensuring that it is always functional and that no potential faults exist in the databases. To recover from faults one should always backup the system when it is a working state, and use passive redundancy to inform system components when they need to make state updates. Thereafter once a fault occurs one can always rollback to the most recent working state.
 
-\subsection{Scalability}
+\subsubsection{Scalability}
 For scalability the goals that need to be achieved include the system being expandable to other faculties at the University, with there being a total of 11 faculties that means the system should thus be able to handle 1100 users concurrently without hassle and still meet the same performance standards as if there were only a 100 users. 
 
 \begin{figure}[H]
@@ -1071,7 +1071,7 @@ For scalability the goals that need to be achieved include the system being expa
 
 The strategies we use to address the scalability of our system to achieve the goal of it being expandable includes the management of resources, this is necessary so that the resources can be managed to deal with the greater demand once the system is expanded to more faculties. In addition the resources will need to be scaled up so that, it can be applied in the different contexts of various faculties hence tactics such as using abstract entities and the support of database field additions. 
 
-\subsection{Usability}
+\subsubsection{Usability}
 Goals that need to be achieved for the usability quality requirement is that the user should be able to perform system operations without hassle, the user interface should not be cluttered and information access by user’s needs to be simple.
 
 \begin{figure}[H]
@@ -1082,7 +1082,7 @@ Goals that need to be achieved for the usability quality requirement is that the
 
 Our chosen usability tactics focus on making the system easier to use for user's. The strategy of having a user interface is important and includes tactics such as using Human Computer Interaction(HCI) techniques as well as having a graphical user interface to make the user feel at ease with the system. In addition information coherence as a tactic is important because it achieves the goal of information access and avoiding clutter and redundancy of information. Also another strategy is having the system able to interact with th user through run-time with tactics like user commands and giving the user feedback on their operations, this makes the sytem more usable because it gives the user a semblance of control and keeps them informed.
 
-\subsection{Auditability}
+\subsubsection{Auditability}
 For auditability, goals that need to be achieved is the tracking of all information associated with the system including errors, changes made, when such occurred and who performed what actions thus creating an audit trail for the system.
 
 \begin{figure}[H]
@@ -1093,7 +1093,7 @@ For auditability, goals that need to be achieved is the tracking of all informat
 
 The strategy to deal with auditability is logging. We will make use of log files to implement tactics like tracking all actions/changes, track the users activity and  track errors as well making use of labels on logs that include time stamps, location of changes or errors as well as who made what changes and what caused errors. This all contributes to enabling system auditability because everything is tracked and stored separate from the system databases.
 
-\subsection{Security}
+\subsubsection{Security}
 With Security the goals that need to be achieved includes a log in system of which the user details will be verified and the prevention of unauthorized access.
 
 \begin{figure}[H]
@@ -1104,7 +1104,7 @@ With Security the goals that need to be achieved includes a log in system of whi
 
 The strategies for addressing the security quality requirement includes resisting attacks through tactics such as user authentication which addresses our goal of a log in system, and user authorization which ensures users have the rights to perform certain actions and data confidentiality which makes sure users only see the information they are allowed to see. Another strategy is the detection of attacks, this is done by requesting re-authentication if log in fails as well as the auditing of sensitive events such as making user removals and the like, and of course the logging of all actions so inconsistencies can be traced. The final strategy being recovery from attacks, this includes such as dropping a request or action once it is found to be unsafe or to be a threat and once an attack is found, restoring the system to it's state before an unsafe action was performed.
 \\
-\subsection{References}
+\subsubsection{References}
 \begin{itemize}
 \item Bachmann, F. Bass, L. Klein, M. 2003. \textit{Deriving Architectural Tactics: A Step Toward Methodical Architectural Design.}  \url{http://www.sei.cmu.edu/reports/03tr004.pdf} [Accessed 8 March 2016]
 \item Kazman, R. Scott, J. 2009. \textit{Realizing and Refining Architectural Tactics: Availability.} [Online]. Available: \url{http://www.sei.cmu.edu/reports/09tr006.pdf} [Accessed 8 March 2016]
