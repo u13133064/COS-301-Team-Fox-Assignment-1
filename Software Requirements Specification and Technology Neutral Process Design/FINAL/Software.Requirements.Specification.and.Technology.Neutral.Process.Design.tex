@@ -899,12 +899,12 @@ In this section, the data structure requirements of the system are specified in 
 \newpage
 \section{Software Architecture}
 %----------------------------------------------------------------------------------------
-% Done by: Jacques van Wyk
+% Done by: Jacques van Wyk (edited by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
 \subsection{Architectural Patterns or Styles}
-	Our research team have decided to use the MVC(Model-View-Controller)- and
+	Our research team has decided to use the MVC (Model-View-Controller)- and
 	Layering architectural patterns for the research publication system for the mini
-	project. Since the system should have a web-interface and a mobile Android interface
+	project. Since the system should have a web-interface and a mobile Android interface,
 	it is necessary to divide the system into parts where the two interfaces are independent
 	of each other, but both can have concurrent access to a central database. In addition,
 	this is necessary, because the interfaces will likely use different client-side
@@ -915,9 +915,8 @@ In this section, the data structure requirements of the system are specified in 
 	\begin{itemize}
 		\item Model
 		\begin{itemize}
-			\item[] The Model represents the database and how the user- and research
-			data is structured, organized and stored in the database on the server-
-			side. Furthermore, it provides an interface through the written server
+			\item[] The Model represents the database and how the user and research
+			data is structured, organized and stored in the database on the server-side. Furthermore, it provides an interface through the written server
 			software by which the model can be manipulated from user interaction
 			through the controller.
 		\end{itemize}
