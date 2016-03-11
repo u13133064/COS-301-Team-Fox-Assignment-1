@@ -156,7 +156,6 @@ A typical usage scenario of the system will be as follows:
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk (edited by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
-\newpage
 \section{Background}
 
 Our group, Team Fox, had a meeting with the client, Ms Vreda Pieterse, on Wednesday, 17 February 2016. The client discussed that she requires the implementation of a system which will allow researchers to keep track of their publications, as well as view statistical information regarding their Research Output Units.
@@ -172,8 +171,7 @@ Furthermore, the project might serve as an example to other students on how to i
 \newpage
 \section{Architecture Requirements}
 
-The software architecture requirements include the access and integration requirements, quality
-requirements and architectural constraints.
+The software architecture requirements include the access and integration requirements, quality requirements and architectural constraints. We will return to the software architecture again toward the end of the paper.
 
 %----------------------------------------------------------------------------------------
 % Done by: Kudzai Muranga (edited by Gian Paolo Buffo)
@@ -252,7 +250,6 @@ While these platforms vary, they will both access the system through this API an
 % Done by: Josef Alberts (edited by Gian Paolo Buffo)
 % TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
-\newpage
 \subsection{Quality Requirements}
 
 \subsubsection{Performance}
@@ -294,7 +291,6 @@ All integration needs to be seamless and not interfere with system performance. 
 % Done by: Jason Gordon
 % TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
-\newpage
 \subsection{Architecture Constraints}
 
 There are not too many architectural constraints to this system. However some constraints do exist, such as:
@@ -316,6 +312,8 @@ There are not too many architectural constraints to this system. However some co
 \item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
 \item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
 \end{itemize}
+
+We will return to the software architecture requirements again later on in the paper. 
 
 \newpage
 \section{Functional requirements and application design}
@@ -393,6 +391,7 @@ Adding a conference paper:
     \includegraphics[width=1\textwidth]{use-case/adding-a-conference-paper.png}
     \end{figure}
 \end{itemize}
+\newpage
 Adding an author to a conference paper:
 \begin{itemize}
     \item Preconditions
@@ -896,11 +895,13 @@ In this section, the data structure requirements of the system are specified in 
     \includegraphics[width=1\textwidth]{domainModel.jpg}
 \end{figure}
 
+
+\newpage
+\section{Software Architecture}
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk
 %----------------------------------------------------------------------------------------
-\newpage
-\section{Architectural Patterns or Styles}
+\subsection{Architectural Patterns or Styles}
 	Our research team have decided to use the MVC(Model-View-Controller)- and
 	Layering architectural patterns for the research publication system for the mini
 	project. Since the system should have a web-interface and a mobile Android interface
@@ -980,12 +981,12 @@ In this section, the data structure requirements of the system are specified in 
 %----------------------------------------------------------------------------------------
 % To be done by: Hlengekile
 %----------------------------------------------------------------------------------------
-\section{Architectural Tactics or Strategies}
+\subsection{Architectural Tactics or Strategies}
 
 %----------------------------------------------------------------------------------------
 % To be done by: Jason and Sandile
 %----------------------------------------------------------------------------------------
-\section{Use of Reference Architectures and Frameworks}
+\subsection{Use of Reference Architectures and Frameworks}
 The reason we are using reference architectures in this system is due to the fact that it helps with the development process of the system. What this section is meant to include is how the system should use frameworks to implement the architectural patten(s) chosen and what the reasons for using these frameworks are. \\
 
 \subsubsection{Web 2.0 Reference Architecture}
@@ -1028,12 +1029,12 @@ Since the integration of jQuery Mobile and Backbone is common they decided to cr
 %----------------------------------------------------------------------------------------
 % To be done by: Josef & GP
 %----------------------------------------------------------------------------------------
-\section{Access and Integration Channels}
+\subsection{Access and Integration Channels}
 
 %----------------------------------------------------------------------------------------
 % To be done by: Jedd
 %----------------------------------------------------------------------------------------
-\section{Technologies}
+\subsection{Technologies}
 
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk and Jason Gordon
