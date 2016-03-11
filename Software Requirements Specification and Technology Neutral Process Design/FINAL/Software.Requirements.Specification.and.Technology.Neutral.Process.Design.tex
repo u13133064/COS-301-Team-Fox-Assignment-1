@@ -156,7 +156,6 @@ A typical usage scenario of the system will be as follows:
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk (edited by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
-\newpage
 \section{Background}
 
 Our group, Team Fox, had a meeting with the client, Ms Vreda Pieterse, on Wednesday, 17 February 2016. The client discussed that she requires the implementation of a system which will allow researchers to keep track of their publications, as well as view statistical information regarding their Research Output Units.
@@ -172,8 +171,7 @@ Furthermore, the project might serve as an example to other students on how to i
 \newpage
 \section{Architecture Requirements}
 
-The software architecture requirements include the access and integration requirements, quality
-requirements and architectural constraints.
+The software architecture requirements include the access and integration requirements, quality requirements and architectural constraints. We will return to the software architecture again toward the end of the paper.
 
 %----------------------------------------------------------------------------------------
 % Done by: Kudzai Muranga (edited by Gian Paolo Buffo)
@@ -252,7 +250,6 @@ While these platforms vary, they will both access the system through this API an
 % Done by: Josef Alberts (edited by Gian Paolo Buffo)
 % TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
-\newpage
 \subsection{Quality Requirements}
 
 \subsubsection{Performance}
@@ -294,7 +291,6 @@ All integration needs to be seamless and not interfere with system performance. 
 % Done by: Jason Gordon
 % TO BE EXTENDED ACCORDING TO NEW TEMPLATE
 %----------------------------------------------------------------------------------------
-\newpage
 \subsection{Architecture Constraints}
 
 There are not too many architectural constraints to this system. However some constraints do exist, such as:
@@ -316,6 +312,8 @@ There are not too many architectural constraints to this system. However some co
 \item Additionally if this system ever needed to be ported to other mobile OS's such as iOS or Windows Mobile it would be difficult due to the difference in development language for each OS.
 \item Lastly no papers, once added, may be deleted. Thus the database could become very large and make system backup and restore more difficult. Also there is no automatic backup of the data in the system, thus it would need to be done manually. 
 \end{itemize}
+
+We will return to the software architecture requirements again later on in the paper. 
 
 \newpage
 \section{Functional requirements and application design}
@@ -393,6 +391,7 @@ Adding a conference paper:
     \includegraphics[width=1\textwidth]{use-case/adding-a-conference-paper.png}
     \end{figure}
 \end{itemize}
+\newpage
 Adding an author to a conference paper:
 \begin{itemize}
     \item Preconditions
@@ -896,14 +895,16 @@ In this section, the data structure requirements of the system are specified in 
     \includegraphics[width=1\textwidth]{domainModel.jpg}
 \end{figure}
 
-%----------------------------------------------------------------------------------------
-% Done by: Jacques van Wyk
-%----------------------------------------------------------------------------------------
+
 \newpage
-\section{Architectural Patterns or Styles}
-	Our research team have decided to use the MVC(Model-View-Controller)- and
+\section{Software Architecture}
+%----------------------------------------------------------------------------------------
+% Done by: Jacques van Wyk (edited by Gian Paolo Buffo)
+%----------------------------------------------------------------------------------------
+\subsection{Architectural Patterns or Styles}
+	Our research team has decided to use the MVC (Model-View-Controller)- and
 	Layering architectural patterns for the research publication system for the mini
-	project. Since the system should have a web-interface and a mobile Android interface
+	project. Since the system should have a web-interface and a mobile Android interface,
 	it is necessary to divide the system into parts where the two interfaces are independent
 	of each other, but both can have concurrent access to a central database. In addition,
 	this is necessary, because the interfaces will likely use different client-side
@@ -914,9 +915,8 @@ In this section, the data structure requirements of the system are specified in 
 	\begin{itemize}
 		\item Model
 		\begin{itemize}
-			\item[] The Model represents the database and how the user- and research
-			data is structured, organized and stored in the database on the server-
-			side. Furthermore, it provides an interface through the written server
+			\item[] The Model represents the database and how the user and research
+			data is structured, organized and stored in the database on the server-side. Furthermore, it provides an interface through the written server
 			software by which the model can be manipulated from user interaction
 			through the controller.
 		\end{itemize}
@@ -980,13 +980,13 @@ In this section, the data structure requirements of the system are specified in 
 %----------------------------------------------------------------------------------------
 % To be done by: Hlengekile
 %----------------------------------------------------------------------------------------
-\section{Architectural Tactics or Strategies}
+\subsection{Architectural Tactics or Strategies}
 
 %----------------------------------------------------------------------------------------
-% To be done by: Jason and Sandile
+% To be done by: Jason and Sandile (edited by Gian Paolo Buffo)
 %----------------------------------------------------------------------------------------
-\section{Use of Reference Architectures and Frameworks}
-The reason we are using reference architectures in this system is due to the fact that it helps with the development process of the system. What this section is meant to include is how the system should use frameworks to implement the architectural patten(s) chosen and what the reasons for using these frameworks are. \\
+\subsection{Use of Reference Architectures and Frameworks}
+The reason we are using reference architectures in this system is due to the fact that it helps with the development process of the system. What this section is meant to include is how the system should use frameworks to implement the architectural pattern(s) chosen and what the reasons for using these frameworks are.
 
 \subsubsection{Web 2.0 Reference Architecture}
 \noindent
@@ -1012,23 +1012,24 @@ This component helps the user to use services and display graphical views. These
 \subparagraph{Design, Development and Governance Tools}\hspace{-10pt}:\\
 This tier refers to the tools that are used to actually build the web application. The reference architecture refers specifically to IDE's however I disagree with that in that one does not necessarily need an IDE to built a web application. This does not necessarily fit into this reference architecture directly. It is more just used to describe a tool for the developer to use and does not use the other tiers directly.
 
-\subsubsection{Bootstrap}We will use bootstrap cs to style the web interface of System .Advantages of using bootstrap  is that is customizable, you pick and choose the feature you want then download the files. Another advantage of bootstrap is that is responsive. This will help other mobile devices such as IOS and blackberry which aren’t running on the specified android app that will be designed. Bootstrap enhances working together as a group because it brings consistency regardless of who did the work and it stays the same across all browsers. Bootstrap is consistently updated so it stays in synced with new technologies. It also has a large support community in case you run into problems.\par 
+\subsubsection{Bootstrap}We will use Bootstrap CSS to style the web interface of the system. Advantages of using bootstrap are that it is customizable - you pick and choose the feature you want then download the files. Another advantage of bootstrap is that is responsive. This will help other mobile devices such as iOS and Blackberry which aren’t running on the specified android app that will be designed. Bootstrap enhances working together as a group because it brings consistency regardless of who did the work and it stays the same across all browsers. Bootstrap is consistently updated so it stays in synced with new technologies. It also has a large support community in case you run into problems.\par 
 \subsubsection{AngularJS}Another framework to be used is AngularJS. AngularJS enables massive parallel development. It also reduces code length, making code easier to maintain. Loops that could have been long are reduced to a single line. It allows a developer to deal with modules on the client side as they would deal with them on the server side.\par 
-\subsubsection{Android SDK}Android SDK will be used to develop the android app, this is specifically developed for android so t makes the functionality of the app faster than an app developed using hybrid frameworks.(such as ionic).\par 
-\subsubsection{Django}Django is another framework will be used. The reason for this is that it follows the MVC architecture design pattern .Django’s primary goal is to make it easy to create data driven websites that are complex. It comes with caching to make processing of data that is frequently uses faster. Django being a server side helps in keeping information safe. In addition Django is very fast.
+\subsubsection{Android SDK}Android SDK will be used to develop the Android application. It is specifically developed for Android, which results in a more efficient application than an application developed using hybrid frameworks (such as the Ionic framework).\par 
+\subsubsection{Django}Django is another framework that will be used. The reason for this is that it follows the MVC architecture design pattern. Django’s primary goal is to make it easy to create data driven websites that are complex. It comes with caching to make processing of data that is frequently used faster. Django, being server-side, helps in keeping information safe. In addition, Django is very fast.
 
 \subsubsection{jQuery Mobile Framework}
 jQuery Mobile is a multi-platform mobile `touch-optimized web framework'. This can be used to develop the Android application for the system. This framework allows a developer to design one application that will be able to run on all smartphone and tablet OS's, allowing for easy portability, if needed at a later stage. To develop an application using this framework, developers need to use web-based languages such as: jQuery, HTML, CSS. It does allow for client-server communication (which is what is needed for this system). This framework is based on web development but was written specifically for smartphone and tablet applications and websites. jQuery mobile uses device-level optimizations to make sure that the layout is appropriate for the specific device it is running on. This allows for easier development of a device agnostic application. This framework is also extensible. It allows for many different third party plugins and is integrable with other frameworks such as AngularJS, Backbone.js and mobile frameworks (to name a few). This creates an opportunity to easily integrate frameworks which can implement the MVC architectural pattern, which is what is being used to develop this system.
 
 \subsubsection{Backbone.js}
-This framework would be used together with the Android application to provide the missing JavaScript architecture which jQuery Mobile cannot provide. jQuery allows the implementation of multiple patterns with a Model and View which is referred to MV*. Thus the implementation of the MVC architectural pattern is possible, which is the pattern that will be used in this system. Backbone helps to structure the application (which could be complex) while still keeping it easily maintainable and fast. Backbone is lightweight and performance-wise it is very good due to the fact that it prefers to integrate with other frameworks to create a User Interface rather than it having something built into it for this feature, thus reducing overhead. The reason that Backbone would be used with jQuery Mobile is the fact that Backbone is not used to create a UI (i.e. the View is basically just a template). Backbone may not necessarily implement a strict class system but it does use prototype-based inheritance as well as object extensions. This makes it possible to implement architectural and design patterns which use Object-Oriented programming. \\
+This framework would be used together with the Android application to provide the missing JavaScript architecture which jQuery Mobile cannot provide. jQuery allows the implementation of multiple patterns with a Model and View which is referred to MV*. Thus the implementation of the MVC architectural pattern is possible, which is the pattern that will be used in this system. Backbone helps to structure the application (which could be complex) while still keeping it easily maintainable and fast. Backbone is lightweight and performance-wise it is very good due to the fact that it prefers to integrate with other frameworks to create a User Interface rather than it having something built into it for this feature, thus reducing overhead. The reason that Backbone would be used with jQuery Mobile is the fact that Backbone is not used to create a UI (i.e. the View is basically just a template). Backbone may not necessarily implement a strict class system but it does use prototype-based inheritance as well as object extensions. This makes it possible to implement architectural and design patterns which use Object-Oriented programming.
 
 \subparagraph{Jackbone.js:}
 Since the integration of jQuery Mobile and Backbone is common they decided to create a framework that integrates the two and makes it easier to develop lightweight, extensible and fast mobile applications. It also makes it easier to implement MV* patterns such as MVC. Where Backbone did not necessarily have a Controller, Jackbone has extended the Backbone framework to implement a controller in the MVC pattern. It relies mostly on Backbone.js and provides specialised classes for view and router.
+
 %----------------------------------------------------------------------------------------
-% To be done by: Josef & GP
+% Done by: Josef & GP
 %----------------------------------------------------------------------------------------
-\section{Access and Integration Channels}
+\subsection{Access and Integration Channels}
 In this section we mention and discuss the main access and integration channels of this system. Among them are different human users, each acting in different roles, and system users - such as remote clients or the database software.
 \begin{itemize}
 \item \textbf{Human Users:}
@@ -1065,7 +1066,7 @@ FTP will be used to transfer files (such as HTML, CSS or PHP files) to and from 
 %----------------------------------------------------------------------------------------
 % To be done by: Jedd
 %----------------------------------------------------------------------------------------
-\section{Technologies}
+\subsection{Technologies}
 
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk and Jason Gordon
