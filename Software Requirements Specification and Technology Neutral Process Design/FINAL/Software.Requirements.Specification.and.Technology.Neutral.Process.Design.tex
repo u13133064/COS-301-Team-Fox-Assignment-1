@@ -15,7 +15,7 @@
 \center % Center everything on the page
  
 %----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
+%-	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
 
 \textsc{\LARGE University of Pretoria}\\[1.5cm]
@@ -23,7 +23,7 @@
 \textsc{\large Team Fox}\\[0.5cm]
 
 %----------------------------------------------------------------------------------------
-%	TITLE SECTION
+%-	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
 \HRule \\[0.4cm]
@@ -31,7 +31,7 @@
 \HRule \\[1.5cm]
  
 %----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
+%-	AUTHOR SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}{0.4\textwidth}
@@ -64,7 +64,7 @@ Kudzai \textsc{Muranga}
 
 
 %----------------------------------------------------------------------------------------
-%	DATE SECTION
+%-	DATE SECTION
 %----------------------------------------------------------------------------------------
 
 {\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
@@ -986,7 +986,45 @@ In this section, the data structure requirements of the system are specified in 
 % To be done by: Jason and Sandile
 %----------------------------------------------------------------------------------------
 \section{Use of Reference Architectures and Frameworks}
+The reason we are using reference architectures in this system is due to the fact that it helps with the development process of the system. What this section is meant to include is how the system should use frameworks to implement the architectural patten(s) chosen and what the reasons for using these frameworks are. \\
 
+\subsubsection{Web 2.0 Reference Architecture}
+\noindent
+We have chosen to use and refer to the Web 2.0 reference architecture due to the fact that this is primarily a web-based system. The Web 2.0 Reference Architecture can be found here: \url{http://archive.oreilly.com/pub/a/web2/excerpts/web2-architectures/chapter-5.html}.\\
+
+\noindent
+This Reference Architecture has 4 main tiers that are essential to our system, namely:
+\begin{enumerate}
+	\item Resource Tier
+	\item Service Tier
+	\item Client Tier and
+	\item Design, Development and governance tools
+\end{enumerate}
+
+\subparagraph{Resource Tier}\hspace{-10pt}:\\
+The Resource tier includes `backend systems that can support services that will be consumed over the internet'. Thus our system will need to use this tier to ``consume" information which is input by the user for either: signing up, logging in adding a paper, changing the state of a paper, removing a user, adding a user etc. All this information will be updated in the database (also considered to be the model of the MVC pattern) which will store all the data of the user's and metadata of the paper's. This tier directly links with the Service tier due to the fact that for validation and storage of the input it needs to be sent to the server side and validated and stored from there. 
+
+\subparagraph{Server Tier}\hspace{-10pt}:\\
+This component connects the resource tier. Since they will be two versions of the application a web based and a android app, we will use the adapter architecture to read the data.
+\subparagraph{Client Tier}\hspace{-10pt}:\\
+This component helps the user to use services and display graphical views. These are the web browsers used.
+
+\subparagraph{Design, Development and Governance Tools}\hspace{-10pt}:\\
+This tier refers to the tools that are used to actually build the web application. The reference architecture refers specifically to IDE's however I disagree with that in that one does not necessarily need an IDE to built a web application. This does not necessarily fit into this reference architecture directly. It is more just used to describe a tool for the developer to use and does not use the other tiers directly.
+
+\subsubsection{Bootstrap}We will use bootstrap cs to style the web interface of System .Advantages of using bootstrap  is that is customizable, you pick and choose the feature you want then download the files. Another advantage of bootstrap is that is responsive. This will help other mobile devices such as IOS and blackberry which aren’t running on the specified android app that will be designed. Bootstrap enhances working together as a group because it brings consistency regardless of who did the work and it stays the same across all browsers. Bootstrap is consistently updated so it stays in synced with new technologies. It also has a large support community in case you run into problems.\par 
+\subsubsection{AngularJS}Another framework to be used is AngularJS. AngularJS enables massive parallel development. It also reduces code length, making code easier to maintain. Loops that could have been long are reduced to a single line. It allows a developer to deal with modules on the client side as they would deal with them on the server side.\par 
+\subsubsection{Android SDK}Android SDK will be used to develop the android app, this is specifically developed for android so t makes the functionality of the app faster than an app developed using hybrid frameworks.(such as ionic).\par 
+\subsubsection{Django}Django is another framework will be used. The reason for this is that it follows the MVC architecture design pattern .Django’s primary goal is to make it easy to create data driven websites that are complex. It comes with caching to make processing of data that is frequently uses faster. Django being a server side helps in keeping information safe. In addition Django is very fast.
+
+\subsubsection{jQuery Mobile Framework}
+jQuery Mobile is a multi-platform mobile `touch-optimized web framework'. This can be used to develop the Android application for the system. This framework allows a developer to design one application that will be able to run on all smartphone and tablet OS's, allowing for easy portability, if needed at a later stage. To develop an application using this framework, developers need to use web-based languages such as: jQuery, HTML, CSS. It does allow for client-server communication (which is what is needed for this system). This framework is based on web development but was written specifically for smartphone and tablet applications and websites. jQuery mobile uses device-level optimizations to make sure that the layout is appropriate for the specific device it is running on. This allows for easier development of a device agnostic application. This framework is also extensible. It allows for many different third party plugins and is integrable with other frameworks such as AngularJS, Backbone.js and mobile frameworks (to name a few). This creates an opportunity to easily integrate frameworks which can implement the MVC architectural pattern, which is what is being used to develop this system.
+
+\subsubsection{Backbone.js}
+This framework would be used together with the Android application to provide the missing JavaScript architecture which jQuery Mobile cannot provide. jQuery allows the implementation of multiple patterns with a Model and View which is referred to MV*. Thus the implementation of the MVC architectural pattern is possible, which is the pattern that will be used in this system. Backbone helps to structure the application (which could be complex) while still keeping it easily maintainable and fast. Backbone is lightweight and performance-wise it is very good due to the fact that it prefers to integrate with other frameworks to create a User Interface rather than it having something built into it for this feature, thus reducing overhead. The reason that Backbone would be used with jQuery Mobile is the fact that Backbone is not used to create a UI (i.e. the View is basically just a template). Backbone may not necessarily implement a strict class system but it does use prototype-based inheritance as well as object extensions. This makes it possible to implement architectural and design patterns which use Object-Oriented programming. \\
+
+\subparagraph{Jackbone.js:}
+Since the integration of jQuery Mobile and Backbone is common they decided to create a framework that integrates the two and makes it easier to develop lightweight, extensible and fast mobile applications. It also makes it easier to implement MV* patterns such as MVC. Where Backbone did not necessarily have a Controller, Jackbone has extended the Backbone framework to implement a controller in the MVC pattern. It relies mostly on Backbone.js and provides specialised classes for view and router.
 %----------------------------------------------------------------------------------------
 % To be done by: Josef & GP
 %----------------------------------------------------------------------------------------
@@ -1020,7 +1058,7 @@ In this section, the data structure requirements of the system are specified in 
 	\begin{itemize}
 	\item Will this new user receive units for the paper if it has already been published?
 	\end{itemize}
-\item If a paper has been "terminated" should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
+\item If a paper has been ``terminated`` should the metadata still be editable while it is in a terminated state (besides for changing the state of the paper)?
 \end{itemize}
 
 
