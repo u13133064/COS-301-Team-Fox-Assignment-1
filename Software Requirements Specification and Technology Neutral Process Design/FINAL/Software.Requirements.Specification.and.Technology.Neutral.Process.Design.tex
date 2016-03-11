@@ -1029,6 +1029,7 @@ Since the integration of jQuery Mobile and Backbone is common they decided to cr
 % To be done by: Josef & GP
 %----------------------------------------------------------------------------------------
 \section{Access and Integration Channels}
+In this section we mention and discuss the main access and integration channels of this system. Among them are different human users, each acting in different roles, and system users - such as remote clients or the database software.
 \begin{itemize}
 \item \textbf{Human Users:}
 Human users will have access to the platform though two separate channels. Namely, through a website interface and a native Android application. 
@@ -1039,6 +1040,26 @@ Human users will have access to the platform though two separate channels. Namel
 \end{itemize}
 \item \textbf{System Users:}
 The system will be sharing information to the two main portals - being web and Android. In order to accomplish this we will be implementing an API (Application Program Interface) which will act as a layer of abstraction. It will provide access to requested information (users, papers, venues, searches, etc.) and carry out tasks on behalf of the portal (be it web or Android). By doing this we will be advancing flexibility of the system, since the same API calls will be used regardless of the platform used to make them. The API will function by receiving a call, delegating the call to the server and then forwarding the response to the client (who made the initial request).
+
+Furthermore the database will be accessed via MongoDB's built-in API and called from the server - where each call from the client is handled. In other words, the server is accessed by a client interface and the server software, in turn, accesses the database.
+
+\item \textbf{Protocols:}
+Here we discuss some of the main protocols we plan to use in implementing this system. This includes protocols for transferring miscellaneous data (such as status codes or images) as well as data such as emails or hypertext files.
+\begin{itemize}
+\item \textbf{TCP/IP (Transmission Control Protocol/Internet Protocol):}
+TCP/IP will be used to establish connections between computers such as the server and the clients. TCP allows us to open a data stream to which we can read and write. This allows us to transfer data over networks, including the Internet. We chose TCP over alternatives such as UDP due to its inherent reliability.
+
+\item \textbf{HTTP (HyperText Transfer Protocol):}
+HTTP will be used to initiate transfers between components of the system. GET and POST request will be used to transfer data to and from the server, database and the numerous client interfaces. Additionally, HTTP provides us with built-in error codes which will allow the system to track the success or failure of a request and react accordingly (retrying or requesting new input data from user).
+
+\item \textbf{SMTP (Simple Mail Transfer Protocols):}
+SMTP will be used to send emails to users, notifying them of oncoming deadlines for paper submission. SMTP provides a stable method to transfer email by letting us transfer the email to a SMTP server and then queueing the mail until the next server - either an intermediate SMTP or POP3/IMAP server - becomes available. By using SMTP we will minimize the chance of mail getting lost and a user not being notified.
+
+\item \textbf{FTP (File Transfer Protocol):}
+FTP will be used to transfer files (such as HTML, CSS or PHP files) to and from the server. It will specifically be used in transferring files to the webserver from remote locations.
+
+
+\end{itemize}
 
 \end{itemize}
 %----------------------------------------------------------------------------------------
