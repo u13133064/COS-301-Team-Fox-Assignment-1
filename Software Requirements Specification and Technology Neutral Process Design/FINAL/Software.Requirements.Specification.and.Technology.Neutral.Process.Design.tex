@@ -1160,7 +1160,66 @@ In addition, the API will communicate with the client and server using AngularJS
 %----------------------------------------------------------------------------------------
 % To be done by: Jedd
 %----------------------------------------------------------------------------------------
-\subsection{Technologies}
+\section{Technologies}
+\subsection{Programming languages}
+\begin{itemize}	
+\item Interface
+	\begin{itemize}
+	\item HTML:  The system will be mainly web based, and will need to be integrated with Andriod for mobile deployment. Thus the 	interface should be represented with HTML 5 as it multplatform and scalable with future technologies. 
+	\item CSS and Bootstrap:  Styling the web based interface should be handled through CSS 3 and the Bootstrap framework.      Bootstrap allows for a responsive, mobile interface with a profissional appearance. Importantly its' current popularity allows for future upgrades and scalable interface design.
+\item Java Script , AngualrJS and Node.js :  The interface needs to remain robust, intuitive and responsive. To achieve  a responsive environment AngularJS wi l be used. Node.js is designed to build scalable network applications and using these frameworks our system will remain modurlized and will allow us to implement dependency injection.
+			
+	\end{itemize}
+\item Server
+The server side processing  needs to be handled by a suitable scripting langauge however the debate between the flexible Python and the standard PHP can be extensive. Below is a solution. 
+	\begin{itemize}
+	
+	\item PHP: Commonly installed environment,embedding in HTML, large user base.
+	 \item Python : More secure then PHP, flexible with extensive add-on modules,tends to lead to much more scalable application
+	\item Solution: WPHP is a WSGI->PHP gateway that "allows you to run PHP processes inside of Python, using a WSGI gateway". In summary using both PHP and Python to achieve best of both options.
+  
+\end{itemize}
+\item Application platform
+\begin{itemize}
+	
+	\item Java: Promotes modulability, intergrates with the other technologies, familiar with.
+	\item Andriod SDK: The mobile application will be andriod exclusive.
+	
+\end{itemize}
+
+\subsection{Framework}
+\newline
+Besides the frameworks mentioned above the following will also be used.
+
+	\begin{itemize}
+	\item Apache Cordova: As the system will need to be mobile device deployable, the  popular mobile application development  framework PhoneGap or more specifically the open source version  Apache Cordova  will be used to wrap the web application into an andriod application without having to remake the system in anything other then HTML, JS and CSS.
+\item  : ASP.NET MVC: The system will follow a MVC architecture and the free, fully supported framework for building web applications  ASP.NET MVC will help facilitate this design.
+\item MEAN : A JavaScript software stack that makes use of  MongoDB, Express.js, Angular.js, and Node.js to create robust, maintanable and efficient applications.
+	\end{itemize}
+
+\subsection{Database Systems}
+
+	\begin{itemize}
+	\item MongoDB: A cross-platform document-oriented databas, NoSQL database. Using JSON-like documents with dynamic schemas, it will be able to intergrate with the system easier and faster. More importantly MongoDB allows scalabilty for our database system. Furhter simplyfing the system it uses Node.js as a plaform and is incorporated in the MEAN stack.
+  
+	\end{itemize}
+\subsection{Operating Systems}
+\begin{itemize}
+	\item Desktop: Windows XP service pack 3, Vista,Windows 7, Windows  8 and Windows 10. Linux ubuntu,ArchLinux, Fedora and all debian based systems. MAC OS  X. All major web browsers will be supported.
+     \item Mobile device: Andriod 2.2 Froyo to Andriod 6.0 Marshmallow and all future releases.
+	\end{itemize}
+\subsection {Server technologies}
+\begin{itemize}
+	\item Express.js: As an alternative to XAMMP Express.js is the acto standard server framework for node.js wich we are already using and is part of the MEAN stack. Express will be set up as our server to host the system.
+	\end{itemize}
+
+\subsection {Other technologies}
+\begin{itemize}
+	\item GitHub: Will be used as our version control system and be used to host our system source code. Thus concurrent work can take place, maintencne does not have to disrupt the system and msitakes can be undone.
+	\end{itemize}
+
+
+
 
 %----------------------------------------------------------------------------------------
 % Done by: Jacques van Wyk and Jason Gordon
